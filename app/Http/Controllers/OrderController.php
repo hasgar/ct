@@ -39,7 +39,7 @@ public function test() {
 $total = 10;
   Mail::send('email.newOrder', ['text' => "hello"], function($message)
   {
-  $message->from('support@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
+  $message->from('admin@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
   ->subject('Contact using Our Contact Form');
   });
 
