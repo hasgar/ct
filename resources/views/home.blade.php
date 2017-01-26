@@ -22,7 +22,6 @@
 
 @section('header-class')
 
-class="nav-top-bg"
 
 @endsection
 
