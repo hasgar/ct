@@ -37,7 +37,7 @@ class OrderController extends Controller
 public function test() {
 
 $total = 10;
-  Mail::send('email.newOrder', $total, function($message)
+  Mail::send('email.newOrder', [$total], function($message)
   {
   $message->from('support@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
   ->subject('Contact using Our Contact Form');
