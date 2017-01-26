@@ -14,6 +14,7 @@ use App\OrderStatus;
 use Redirect;
 use Carbon\Carbon;
 use Auth;
+use Illuminate\Support\Facades\Mail;
 use App\Orders;
 use App\OrderCakes;
 class OrderController extends Controller
@@ -35,6 +36,12 @@ class OrderController extends Controller
      */
 public function test() {
 
+$total = 10;
+  Mail::send('email.newOrder', $total, function($message)
+  {
+  $message->from('support@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
+  ->subject('Contact using Our Contact Form');
+  });
 
 }
     public function confirmed() {
