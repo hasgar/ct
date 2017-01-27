@@ -35,9 +35,14 @@ class OrderController extends Controller
      * @return \Illuminate\Http\Response
      */
 public function test() {
-
-$total = 10;
-  Mail::send('email.newOrder', ['text' => "hello"], function($message)
+$id = 2;
+$order = Order::where('id',$id)->first();
+$cakes = OrderCakes::where('order_id',$id)->get();
+$user = User::where('id',$order["user_id"])->first();
+$emirate = Emirates::where('id',$order["emirate_id"])->first();
+$timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
+return view('email.newOrder')->with(['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot]);
+  Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
   {
   $message->from('admin@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
   ->subject('Contact using Our Contact Form');
@@ -164,6 +169,7 @@ $total = 10;
         'landmark' => $request["landmark"],
         'street_address' => $request["street_address"],
         'your_phone' => $request["your_phone"],
+        'delivery_date' => $request["order_date"],
         'reciever_phone' => $request["reciever_phone"],
         'notes' => $request["notes"]
 

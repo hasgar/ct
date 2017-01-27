@@ -128,7 +128,7 @@ class="nav-top-bg"
               <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                       <label><i class="icon-calendar-7"></i> Select a date</label>
-                      <input name="order_date" class="date-pick form-control" data-date-format="M d, D" type="text" required>
+                      <input name="order_date" class="date-pick form-control" data-date-format="yyyy-mm-dd" type="text" required>
                   </div>
               </div>
               <div class="col-md-6 col-sm-6">

@@ -36,6 +36,7 @@ class CreateOrdersTable extends Migration
             $table->text('street_address');
             $table->string('your_phone');
             $table->string('reciever_phone')->nullable();
+            $table->date('delivery_date');
             $table->text('notes');
             $table->string('token');
             $table->timestamps();
