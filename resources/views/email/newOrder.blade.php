@@ -600,9 +600,9 @@ echo $s_msg;
 																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tbody><tr>
 																				<td valign="top" class="textContent">
-																					<div style="text-align: right;font-family:Helvetica,Arial,sans-serif;font-size: 18px;margin-bottom:0;margin-top:3px;color: #656363;line-height:135%;">Item Total: <b><?php echo $order["net_total"]; ?></b></div>
+																				<!--	<div style="text-align: right;font-family:Helvetica,Arial,sans-serif;font-size: 18px;margin-bottom:0;margin-top:3px;color: #656363;line-height:135%;">Item Total: <b><?php echo $order["net_total"]; ?></b></div>
                                                                                     <div style="text-align: right;font-family:Helvetica,Arial,sans-serif;font-size: 18px;margin-bottom:0;margin-top:3px;color: #656363;line-height:135%;">Service Charge: <b><?php echo $order["service_charge"]; ?></b></div>
-					<div style="text-align: right;font-family:Helvetica,Arial,sans-serif;font-size: 18px;margin-bottom:0;margin-top:3px;color: #F9A217;line-height:135%;">Discount: <b>- <?php echo $order["discount"]; ?></b></div>
+					<div style="text-align: right;font-family:Helvetica,Arial,sans-serif;font-size: 18px;margin-bottom:0;margin-top:3px;color: #F9A217;line-height:135%;">Discount: <b>- <?php echo $order["discount"]; ?></b></div> -->
 <div style="text-align: right;font-family:Helvetica,Arial,sans-serif;font-size: 22px;margin-bottom:0;margin-top:3px;color: #CA1414;line-height:135%;">Grand Total: <b><?php echo $order["grand_total"]; ?></b></div></td>
 																			</tr>
 																		</tbody></table>
