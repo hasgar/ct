@@ -171,7 +171,7 @@ return view('email.newOrder')->with(['order' => $order, 'cakes' => $cakes, 'user
         'your_phone' => $request["your_phone"],
         'delivery_date' => $request["order_date"],
         'reciever_phone' => $request["reciever_phone"],
-        'notes' => $request["notes"]
+        'notes' => $request["notes"],
         'token' => $this->generateRandomString()
       ]);
 
