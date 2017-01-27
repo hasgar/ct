@@ -258,7 +258,7 @@
 																			<tbody><tr>
 																				<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Type of Cake:</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?php if($cake['is_photo'] == '1') echo "Photo Cake"; else if($cake['flavor_id'] != '0') echo "Shaped Cake - "; ?>{{ CakeController::getCakeNameById($cake["cake_id"]) }} <?php echo " (CK".$cake['flavor_id'].")"; else echo "Normal Cake"; ?></div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?php if($cake['is_photo'] == '1') echo "Photo Cake"; else if($cake['flavor_id'] != '0') echo "Shaped Cake - ".CakeController::getCakeNameById($cake["cake_id"])." (CK".$cake['flavor_id'].")"; else echo "Normal Cake"; ?></div>
 																				</td>
 																			</tr>
 																		</tbody></table>
