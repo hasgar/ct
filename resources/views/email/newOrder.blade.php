@@ -258,7 +258,7 @@
 																			<tbody><tr>
 																				<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Type of Cake:</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?php if($cake['is_photo'] == '1') echo "Photo Cake"; else if($cake['flavor_id'] != '0') echo "Shaped Cake - ".CakeController::getCakeNameById($cake["cake_id"])." (CK".$cake['flavor_id'].")"; else echo "Normal Cake"; ?></div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?php if($cake['is_photo'] == '1') echo "Photo Cake"; else if($cake['flavour_id'] != '0') echo "Shaped Cake - ".CakeController::getCakeNameById($cake["flavour_id"])." (CK".$cake['cake_id'].")"; else echo "Normal Cake"; ?></div>
 																				</td>
 																			</tr>
 																		</tbody></table>
@@ -480,7 +480,7 @@ echo $s_msg;
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?PHP if($cake['is_cheeseless'] == '1') echo '<span style="color:red;">YES</span>'; else echo "No"; ?></div>
 																				</td>																			<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;padding-left:2px">Cake Photo:</h3>
-																					<div style="text-align:left;border-left:3px solid #fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><a href="http://www.caketreeonline.com/<?php if($cake['is_photo'] == '1') echo "uploads/".$cake['photo_url']; else if($cake['flavor_id'] != '0') echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["flavour_id"]."_small_1.jpg"; else echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["id"]."_small_1.jpg"; ?>">Click Here</a></div>
+																					<div style="text-align:left;border-left:3px solid #fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><a href="http://www.caketreeonline.com/<?php if($cake['is_photo'] == '1') echo "uploads/".$cake['photo_url']; else if($cake['flavour_id'] != '0') echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["flavour_id"]."_small_1.jpg"; else echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["id"]."_small_1.jpg"; ?>">Click Here</a></div>
 																				</td>
 																			</tr>
 																		</tbody></table>
@@ -679,7 +679,7 @@ echo $s_msg;
 <div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #FBFBFB;line-height:135%;background-color: #3E9AF9;"><a target="_blank" href="http://www.caketreeonline.com/changeStatus/<?php echo $order["id"]; ?>&t=<?php echo $order["token"]; ?>&s=2" style="
     color: #fff;
 ">Order Processing</a></div>
-<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #FBFBFB;line-height:135%;background-color: #3E9bt9;"><a target="_blank" href="http://www.caketreeonline.com/changeStatus/<?php echo $order["id"]; ?>&t=<?php echo $order["token"]; ?>&s=4" style="
+<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #FBFBFB;line-height:135%;background-color: #ea842a;"><a target="_blank" href="http://www.caketreeonline.com/changeStatus/<?php echo $order["id"]; ?>&t=<?php echo $order["token"]; ?>&s=4" style="
     color: #fff;
 ">Order Out for Delivery</a></div>
 																		<div style="text-align:center;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:7px;color: #FBFBFB;line-height:135%;background-color: #09B154;"><a target="_blank" href="http://www.caketreeonline.com/changeStatus/<?php echo $order["id"]; ?>&t=<?php echo $order["token"]; ?>&s=6" style="
