@@ -36,7 +36,7 @@ class OrderController extends Controller
      */
 public function test() {
 $id = 2;
-$order = Order::where('id',$id)->first();
+$order = Orders::where('id',$id)->first();
 $cakes = OrderCakes::where('order_id',$id)->get();
 $user = User::where('id',$order["user_id"])->first();
 $emirate = Emirates::where('id',$order["emirate_id"])->first();
