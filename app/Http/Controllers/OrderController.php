@@ -41,8 +41,7 @@ $cakes = OrderCakes::where('order_id',$id)->get();
 $user = User::where('id',$order["user_id"])->first();
 $emirate = Emirates::where('id',$order["emirate_id"])->first();
 $timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
-return view('email.newOrder')->with(['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot]);
-  Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
   {
   $message->from('admin@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
   ->subject('Contact using Our Contact Form');
@@ -212,7 +211,22 @@ return view('email.newOrder')->with(['order' => $order, 'cakes' => $cakes, 'user
           'status_id'=> 2
 
         ]);
-        $mail = (new MailController)->sendOrderDetails($order["id"]);
+
+        $order = Orders::where('id',$order["id"])->first();
+        $cakes = OrderCakes::where('order_id',$order["id"])->get();
+        $user = User::where('id',$order["user_id"])->first();
+        $emirate = Emirates::where('id',$order["emirate_id"])->first();
+        $timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
+        Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+          {
+          $message->from('orders@caketreeonline.com')->to('orders@caketreeonline.com','New Order')
+          ->subject('New Order');
+          });
+        Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+          {
+          $message->from('orders@caketreeonline.com')->to($user["email"],'CakeTree Order')
+          ->subject('CakeTree Order Invoice');
+          });
         return redirect('/confirmed');
 
  }
