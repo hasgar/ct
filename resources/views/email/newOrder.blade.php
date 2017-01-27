@@ -520,7 +520,7 @@ echo $s_msg;
 																		<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																			<tbody><tr>
 																				<td valign="top" class="textContent">
-																					<div style="text-align:right;font-family:Helvetica,Arial,sans-serif;font-size: 20px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">Amount: <b><?php echo $row['sold_price']; ?></b></div>
+																					<div style="text-align:right;font-family:Helvetica,Arial,sans-serif;font-size: 20px;margin-bottom:0;margin-top:3px;color:#5F5F5F;line-height:135%;">Amount: <b><?php echo $cake['amount_sold']; ?></b></div>
 																				</td>
 																			</tr>
 																		</tbody></table>
