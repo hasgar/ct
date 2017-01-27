@@ -389,7 +389,7 @@
 																				</td>
 <td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;padding-left: 3px;">Eggless:</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 7px;border-left: #FFFFFF 3px solid;"><?PHP if($row['is_eggless'] == '1') echo '<span style="color:red;">YES</span>'; else echo "No"; ?></div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 7px;border-left: #FFFFFF 3px solid;"><?PHP if($cake['is_eggless'] == '1') echo '<span style="color:red;">YES</span>'; else echo "No"; ?></div>
 																				</td>																			</tr>
 																		</tbody></table>
 																		<!-- // CONTENT TABLE -->
@@ -477,10 +477,10 @@ echo $s_msg;
 																			<tbody><tr>
 	<td valign="top" class="textContent" style="width: 50%;">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Cheeseless:</h3>
-																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?PHP if($row['is_cheeseless'] == '1') echo '<span style="color:red;">YES</span>'; else echo "No"; ?></div>
+																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?PHP if($cake['is_cheeseless'] == '1') echo '<span style="color:red;">YES</span>'; else echo "No"; ?></div>
 																				</td>																			<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;padding-left:2px">Cake Photo:</h3>
-																					<div style="text-align:left;border-left:3px solid #fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><a href="http://www.caketreeonline.com/img/<?php if($row['is_photo'] == '1') echo "uploads/".$cake['photo_url']; else if($cake['flavor_id'] != '0') echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["flavour_id"]."_small_1.jpg"; else echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["id"]."_small_1.jpg"; ?>">Click Here</a></div>
+																					<div style="text-align:left;border-left:3px solid #fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><a href="http://www.caketreeonline.com/<?php if($cake['is_photo'] == '1') echo "uploads/".$cake['photo_url']; else if($cake['flavor_id'] != '0') echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["flavour_id"]."_small_1.jpg"; else echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["id"]."_small_1.jpg"; ?>">Click Here</a></div>
 																				</td>
 																			</tr>
 																		</tbody></table>
