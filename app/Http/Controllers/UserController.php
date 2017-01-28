@@ -11,8 +11,14 @@ use App\User;
 class UserController extends Controller
 {
     public function createTempUser($name, $email) {
-      if (User::where("email",$email)->count())
+      if (User::where("email",$email)->count() > 0)
           return User::where("email",$email)->get();
+      return User::create(['name' => $name, 'email' => $email,'password'=>bcrypt($this->generateRandomString())]);
+    }
+
+    public function tester() {
+      $email = "sdsdd@dsd.cc";
+      //return User::where("email",$email)->get();
       return User::create(['name' => $name, 'email' => $email,'password'=>bcrypt($this->generateRandomString())]);
     }
 
