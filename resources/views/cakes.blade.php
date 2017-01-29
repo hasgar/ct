@@ -69,12 +69,12 @@ class="nav-top-bg"
                             <?php $count = 1;
                             foreach( $cakes as $cake )
                             {
-                            if ($count%3 == 1)
+                            if ($count%4 == 1)
                             {
                             echo '<div class="row">';
                             }
                             ?>
-                            <div class="col-md-4 col-sm-4">
+                            <div class="col-md-3 col-sm-3">
                               <a class="hide-this" href="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}-cake-{{$cake["id"]}}">{{$cake["name"]}}</a>
                                 <a class="strip_list grid" href="#0" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{$cake["amount"]}}" data-min="{{$cake["minimum_kg"]}}" data-id="{{$cake["id"]}}" data-type="normal">
 
@@ -91,13 +91,13 @@ class="nav-top-bg"
                                 </a><!-- End strip_list-->
                               </div>
                             <?php
-                            if ($count%3 == 0)
+                            if ($count%4 == 0)
                             {
                             echo "</div>";
                             }
                             $count++;
                             }
-                            if ($count%3 != 1) echo "</div>"; ?>
+                            if ($count%4 != 1) echo "</div>"; ?>
 
 
 
@@ -192,12 +192,12 @@ class="nav-top-bg"
                             <?php $count = 1;
 foreach( $theme_cakes as $cake )
 {
-  if ($count%3 == 1)
+  if ($count%4 == 1)
   {
        echo '<div class="row">';
   }
 ?>
-<div class="col-md-4 col-sm-4">
+<div class="col-md-3 col-sm-3">
     <a class="strip_list grid" href="#0" data-min="{{$cake["minimum_kg"]}}" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{$cake["amount"]}}" data-id="{{$cake["id"]}}" data-type="theme">
         <div class="desc">
           <div class="col-md-12 cake-block">
@@ -212,13 +212,13 @@ foreach( $theme_cakes as $cake )
     </a><!-- End strip_list-->
   </div>
   <?php
-  if ($count%3 == 0)
+  if ($count%4 == 0)
   {
       echo "</div>";
   }
   $count++;
 }
-if ($count%3 != 1) echo "</div>"; ?>
+if ($count%4 != 1) echo "</div>"; ?>
 
 
                           </div><!-- End col-md-9-->

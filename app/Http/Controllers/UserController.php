@@ -16,11 +16,6 @@ class UserController extends Controller
       return User::create(['name' => $name, 'email' => $email,'password'=>bcrypt($this->generateRandomString())]);
     }
 
-    public function tester() {
-      $email = "sdsdd@dsd.cc";
-      //return User::where("email",$email)->get();
-      return User::create(['name' => $name, 'email' => $email,'password'=>bcrypt($this->generateRandomString())]);
-    }
 
     public function generateRandomString($length = 10) {
      $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';

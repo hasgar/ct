@@ -25,7 +25,6 @@ Route::get('/buy-{name}-cake-{emirate}-online-{id}', 'CakeController@cakeDetails
 Route::get('/{name}-cake-{id}', 'CakeController@cakeDetails')->where('id', '[0-9]+')->where('emirate', '[A-Za-z]+');
 Route::get('/checkout', 'OrderController@checkout');
 Route::get('/test', 'OrderController@test');
-Route::get('/tester', 'UserController@tester');
 Route::post('/addCakeToCart', 'OrderController@addToCart');
 Route::get('/removeFromCart/{id}', 'CartController@removeFromCart');
 Route::post('/placeOrder', 'OrderController@placeOrder');

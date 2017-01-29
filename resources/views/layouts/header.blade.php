@@ -48,7 +48,7 @@
                <li class="submenu">
                <a href="javascript:void(0);" class="show-submenu"><i class="icon-user-1"></i> {{ strlen(Auth::user()->name) > 20 ? substr(Auth::user()->name, 0, 18).".." : Auth::user()->name  }}<i class="icon-down-open-mini"></i></a>
                <ul>
-                 <li><a href="/orders"><i class="icon-docs-1"></i>Your Orders</a></li>
+                <!--- <li><a href="/orders"><i class="icon-docs-1"></i>Your Orders</a></li> -->
                  <li><a href="/logout"><i class="icon-logout-2"></i> Logout</a></li>
                    </ul>
                </li>
@@ -87,7 +87,7 @@
              <li class="submenu">
              <a href="javascript:void(0);" class="show-submenu"><i class="icon-user-1"></i> {{ Auth::user()->name }}<i class="icon-down-open-mini"></i></a>
              <ul>
-               <li><a href="/orders"><i class="icon-docs-1"></i>Your Orders</a></li>
+               <!--- <li><a href="/orders"><i class="icon-docs-1"></i>Your Orders</a></li> -->
                <li><a href="/logout"><i class="icon-logout-2"></i> Logout</a></li>
                  </ul>
              </li>

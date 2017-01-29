@@ -105,12 +105,35 @@
         </div>
     </div><!-- End row -->
 
-    <div id="delivery_time" class="hidden-xs">
-        <strong><span>2</span><span>5</span></strong>
-        <h4>The minutes that usually takes to deliver!</h4>
-    </div>
-    </div><!-- End container -->
+    <div class="main_title">
+              <h2 class="nomargin_top">Our feautures</h2>
 
+          </div>
+
+
+          <div class="row">
+          		<div class="col-md-4" >
+          			<div class="feature">
+          				<i class="icon_currency"></i>
+          				<h3><span>Cash on</span> Delivery</h3>
+
+          			</div>
+          		</div>
+          		<div class="col-md-4">
+          			<div class="feature">
+          				<i class="icon-thumbs-up-2"></i>
+          				<h3><span>100%</span> Satisfication  </h3>
+
+          			</div>
+          		</div>
+              <div class="col-md-4">
+          			<div class="feature">
+          				<i class="icon-paper-plane"></i>
+          				<h3><span>Fast & Free</span> Delivery</h3>
+
+          			</div>
+          		</div>
+          	</div>
 
 
 <section class="parallax-window" data-parallax="scroll" data-image-src="img/bg_office.jpg" data-natural-width="1200" data-natural-height="600">
