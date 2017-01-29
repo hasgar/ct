@@ -11,10 +11,13 @@
 |
 */
 
-Route::get('/contact', function () {
+Route::get('/contact-us', function () {
     return view('contact');
 });
 
+Route::get('/about-us', function () {
+    return view('about');
+});
 
 Route::auth();
 
