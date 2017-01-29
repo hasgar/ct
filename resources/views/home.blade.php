@@ -104,7 +104,7 @@
             </div>
         </div>
     </div><!-- End row -->
-
+<br><br>
     <div class="main_title">
               <h2 class="nomargin_top">Our feautures</h2>
 
@@ -134,7 +134,7 @@
           			</div>
           		</div>
           	</div>
-
+</div>
 
 <section class="parallax-window" data-parallax="scroll" data-image-src="img/bg_office.jpg" data-natural-width="1200" data-natural-height="600">
 <div class="parallax-content">
