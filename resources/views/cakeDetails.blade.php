@@ -104,7 +104,7 @@ class="nav-top-bg"
         @endif
 
         <div class="col-md-6 col-sm-6 no-left-padding">
-          <input type="number" step="0.5" min="1" required class="form-control form-white" name="kg" placeholder="Kg">
+          <input type="number" step="0.5" min="{{$cake["minimum_kg"]}}" required class="form-control form-white" name="kg" placeholder="Kg">
         </div>
         <div class="col-md-6 col-sm-6 no-right-padding">
           <input type="number" class="form-control form-white" required min="1" name="quantity" placeholder="Quantity">
