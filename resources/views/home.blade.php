@@ -17,6 +17,8 @@
 @section('extra_css')
 
 
+<link href="layerslider/css/layerslider.css" rel="stylesheet">
+
 @endsection
 
 
@@ -28,6 +30,83 @@
 @section('content')
 
 <!-- SubHeader =============================================== -->
+<div id="full-slider-wrapper">
+<div id="layerslider" style="width:100%;height:600px;">
+    <!-- first slide -->
+    <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
+        <img src="img/slides/slide_1.jpg" class="ls-bg" alt="Slide background">
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" ><strong>Enjoy</strong> a quick friends dinner</h3>
+        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
+            <div id="custom-search-input">
+                <div class="input-group">
+                <select class="search-query" onchange="location = this.value;">
+                  <option value="" disabled selected>Select your emirate</option>
+                  @foreach ($emirates as $emirate)
+                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+                  @endforeach
+
+                </select>
+
+                </div>
+            </div>
+        </form>
+</div>
+
+    <!-- second slide -->
+<div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
+        <img  src="img/slides/slide_4.jpg" class="ls-bg" alt="Slide background">
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Quick &amp; <strong>affordable</strong> quick food</h3>
+        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
+            <div id="custom-search-input">
+                <div class="input-group">
+                <select class="search-query" onchange="location = this.value;">
+                  <option value="" disabled selected>Select your emirate</option>
+                  @foreach ($emirates as $emirate)
+                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+                  @endforeach
+
+                </select>
+
+                </div>
+            </div>
+        </form>
+</div>
+
+ <!-- third slide -->
+ <div class="ls-slide" data-ls="slidedelay:3000; transition2d:5;" >
+         <img src="img/slides/slide_2.jpg" class="ls-bg" alt="Slide background">
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" ><strong>Great</strong> Food Quality &amp; Variety</h3>
+        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
+            <div id="custom-search-input">
+                <div class="input-group">
+                <select class="search-query" onchange="location = this.value;">
+                  <option value="" disabled selected>Select your emirate</option>
+                  @foreach ($emirates as $emirate)
+                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+                  @endforeach
+
+                </select>
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+<!-- fourth slide -->
+<div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
+    <img src="img/slides/slide_3.jpg" class="ls-bg" alt="Slide background">
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Stop your <strong>hunger</strong> quickly</h3>
+        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+        <p class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;"><a href="list_page.html" class="button_intro">Search</a> <a href="index_8.html#0" class="button_intro outline">Read more</a></p>
+</div>
+</div>
+
+</div><!-- End layerslider -->
+<!--
 <section class="parallax-window" id="home" data-parallax="scroll" data-image-src="img/sub_header_home.jpg" data-natural-width="1400" data-natural-height="550">
 <div id="subheader">
     <div id="sub_content">
@@ -47,8 +126,8 @@
                 </div>
             </div>
         </form>
-    </div><!-- End sub_content -->
-</div><!-- End subheader -->
+    </div><!-- End sub_content
+</div> End subheader -->
 <!--<div id="count" class="hidden-xs">
     <ul>
         <li><span class="number">2650</span> Restaurant</li>
@@ -111,29 +190,36 @@
           </div>
 
 
-          <div class="row">
-          		<div class="col-md-4" >
-          			<div class="feature">
-          				<i class="icon_currency"></i>
-          				<h3><span>Cash on</span> Delivery</h3>
 
-          			</div>
-          		</div>
-          		<div class="col-md-4">
-          			<div class="feature">
-          				<i class="icon-thumbs-up-2"></i>
-          				<h3><span>100%</span> Satisfication  </h3>
 
-          			</div>
-          		</div>
-              <div class="col-md-4">
-          			<div class="feature">
-          				<i class="icon-paper-plane"></i>
-          				<h3><span>Fast & Free</span> Delivery</h3>
 
-          			</div>
-          		</div>
-          	</div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box_home" id="one">
+                        <h3>CASH ON DELIVERY</h3>
+                        <p>
+                          Dummy text here...
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box_home" id="two">
+                        <h3>100% Satisfication</h3>
+                        <p>
+                            Dummy text here...
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box_home" id="three">
+                        <h3>Fast & Free Delivery</h3>
+                        <p>
+                            Dummy text here...
+                        </p>
+                    </div>
+                </div>
+
+            </div><!-- End row -->
 </div>
 
 <section class="parallax-window" data-parallax="scroll" data-image-src="img/bg_office.jpg" data-natural-width="1200" data-natural-height="600">
@@ -159,5 +245,25 @@
 
 @section('extra_js')
 
+<script src="layerslider/js/greensock.js"></script>
+<script src="layerslider/js/layerslider.transitions.js"></script>
+<script src="layerslider/js/layerslider.kreaturamedia.jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		'use strict';
+        $('#layerslider').layerSlider({
+            autoStart: true,
+			responsive: true,
+			responsiveUnder: 1280,
+			layersContainer: 1170,
+			navButtons:true,
+			showCircleTimer:true,
+			navStartStop:true,
+            skinsPath: 'layerslider/skins/'
+            // Please make sure that you didn't forget to add a comma to the line endings
+            // except the last line!
+        });
+    });
+</script>
 
 @endsection

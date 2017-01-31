@@ -104,11 +104,34 @@ class="nav-top-bg"
         @endif
 
         <div class="col-md-6 col-sm-6 no-left-padding">
-          <input type="number" step="0.5" min="{{$cake["minimum_kg"]}}" required class="form-control form-white" name="kg" placeholder="Kg">
+          <select  class="form-control" id="kg" name="kg" autocomplete="off">
+            <option value="" selected disabled="">Select KG</option>
+            <option value="1">1</option>
+            <option value="1.5">1.5</option>
+            <option value="2">2</option>
+            <option value="2.5">2.5</option>
+            <option value="3">3</option>
+            <option value="3.5">3.5</option>
+            <option value="4">4</option>
+            <option value="4.5">4.5</option>
+            <option value="5">5</option>
+          </select>
         </div>
         <div class="col-md-6 col-sm-6 no-right-padding">
-          <input type="number" class="form-control form-white" required min="1" name="quantity" placeholder="Quantity">
-        </div>
+          <select  class="form-control" id="quantity" name="quantity" autocomplete="off">
+            <option value="" selected disabled="">Select Quantity</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          </div>
         <textarea class="form-control form-white cake-msg" placeholder="Message on cake" name="message"  rows="3" cols="50"></textarea>
         <div class="col-md-6 col-sm-6 no-left-padding filter_type" align="left">
         <ul class="nomargin">

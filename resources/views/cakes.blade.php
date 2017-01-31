@@ -123,14 +123,37 @@ class="nav-top-bg"
                                           <div class="col-md-6 col-sm-6 no-left-padding">
                                               <div class="form-group">
                                                 <label>KG</label>
-                                                  <input type="number" required step="0.5" min="1" class="form-control" id="kg" value="1" name="kg" placeholder="kg" autocomplete="off">
+                                                  <select  class="form-control" id="kg" name="kg" autocomplete="off">
+                                                    <option value="" selected disabled="">Select KG</option>
+                                                    <option value="1">1</option>
+                                                    <option value="1.5">1.5</option>
+                                                    <option value="2">2</option>
+                                                    <option value="2.5">2.5</option>
+                                                    <option value="3">3</option>
+                                                    <option value="3.5">3.5</option>
+                                                    <option value="4">4</option>
+                                                    <option value="4.5">4.5</option>
+                                                    <option value="5">5</option>
+                                                  </select>
                                                </div>
                                           </div>
                                           <div class="col-md-6 col-sm-6 no-right-padding">
                                               <div class="form-group">
                                                 <label>Quantity</label>
-                                                  <input type="number" required class="form-control" id="quantity" min="1" name="quantity" placeholder="Quaitity" value="1" autocomplete="off">
-                                               </div>
+                                                <select  class="form-control" id="quantity" name="quantity" autocomplete="off">
+                                                  <option value="" selected disabled="">Select Quantity</option>
+                                                  <option value="1">1</option>
+                                                  <option value="2">2</option>
+                                                  <option value="3">3</option>
+                                                  <option value="4">4</option>
+                                                  <option value="5">5</option>
+                                                  <option value="6">6</option>
+                                                  <option value="7">7</option>
+                                                  <option value="8">8</option>
+                                                  <option value="9">9</option>
+                                                  <option value="10">10</option>
+                                                </select>
+                                                   </div>
                                           </div>
                                         </div>
                                       </div>
@@ -252,10 +275,33 @@ if ($count%4 != 1) echo "</div>"; ?>
 
           </select>
           <div class="col-md-6 col-sm-6 no-left-padding">
-            <input type="number" required step="0.5" min="1" class="form-control form-white" id="cake_kg" name="kg" placeholder="Kg">
+            <select  class="form-control" id="cake_kg" name="kg" autocomplete="off">
+              <option value="" selected disabled="">Select KG</option>
+              <option value="1">1</option>
+              <option value="1.5">1.5</option>
+              <option value="2">2</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3</option>
+              <option value="3.5">3.5</option>
+              <option value="4">4</option>
+              <option value="4.5">4.5</option>
+              <option value="5">5</option>
+            </select>
           </div>
           <div class="col-md-6 col-sm-6 no-right-padding">
-            <input type="number" required class="form-control form-white" name="quantity" min="1"  placeholder="Quantity">
+            <select  class="form-control" id="quantity" name="quantity" autocomplete="off">
+              <option value="" selected disabled="">Select Quantity</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </div>
 					<textarea class="form-control form-white cake-msg" name="message" placeholder="Message on cake" rows="3" cols="50"></textarea>
           <div class="col-md-6 col-sm-6 no-left-padding filter_type" align="left">
