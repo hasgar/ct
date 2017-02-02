@@ -74,6 +74,8 @@ class CartController extends Controller
   }
 
   public static function getItemAmount($id,$quantity,$kg,$type) {
+
+    $settings = Settings::first();
     $total = 0;
     $cake = Cakes::where('id',$id)->first();
       $cake_price = $cake["amount"];
