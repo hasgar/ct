@@ -40,7 +40,7 @@
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
                 <div class="input-group col-md-12 col-sm-12">
-                <select class="search-query" onchange="location = this.value;">
+                <select class="form-control col-md-12 col-sm-12"onchange="location = this.value;">
                   <option value="" disabled selected>Select your emirate</option>
                   @foreach ($emirates as $emirate)
                     <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
@@ -61,7 +61,8 @@
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
               <div class="input-group col-md-12 col-sm-12">
-              <select class="search-query" onchange="location = this.value;">
+
+                <select class=" form-control"  onchange="location = this.value;">
                 <option value="" disabled selected>Select your emirate</option>
                 @foreach ($emirates as $emirate)
                   <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
@@ -82,7 +83,7 @@
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
               <div class="input-group col-md-12 col-sm-12">
-              <select class="search-query" onchange="location = this.value;">
+              <select class=" form-control" onchange="location = this.value;">
                 <option value="" disabled selected>Select your emirate</option>
                 @foreach ($emirates as $emirate)
                   <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
@@ -104,7 +105,7 @@
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
               <div class="input-group col-md-12 col-sm-12">
-              <select class="search-query" onchange="location = this.value;">
+              <select class=" form-control" onchange="location = this.value;">
                 <option value="" disabled selected>Select your emirate</option>
                 @foreach ($emirates as $emirate)
                   <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
