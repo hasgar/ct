@@ -39,7 +39,7 @@
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
-                <div class="input-group">
+                <div class="input-group col-md-12 col-sm-12">
                 <select class="search-query" onchange="location = this.value;">
                   <option value="" disabled selected>Select your emirate</option>
                   @foreach ($emirates as $emirate)
@@ -60,16 +60,16 @@
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
-                <div class="input-group">
-                <select class="search-query" onchange="location = this.value;">
-                  <option value="" disabled selected>Select your emirate</option>
-                  @foreach ($emirates as $emirate)
-                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                  @endforeach
+              <div class="input-group col-md-12 col-sm-12">
+              <select class="search-query" onchange="location = this.value;">
+                <option value="" disabled selected>Select your emirate</option>
+                @foreach ($emirates as $emirate)
+                  <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+                @endforeach
 
-                </select>
+              </select>
 
-                </div>
+              </div>
             </div>
         </form>
 </div>
@@ -81,16 +81,16 @@
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
         <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
-                <div class="input-group">
-                <select class="search-query" onchange="location = this.value;">
-                  <option value="" disabled selected>Select your emirate</option>
-                  @foreach ($emirates as $emirate)
-                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                  @endforeach
+              <div class="input-group col-md-12 col-sm-12">
+              <select class="search-query" onchange="location = this.value;">
+                <option value="" disabled selected>Select your emirate</option>
+                @foreach ($emirates as $emirate)
+                  <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+                @endforeach
 
-                </select>
+              </select>
 
-                </div>
+              </div>
             </div>
         </form>
 
@@ -101,40 +101,24 @@
     <img src="img/slides/slide_3.jpg" class="ls-bg" alt="Slide background">
       <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Stop your <strong>hunger</strong> quickly</h3>
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
-        <p class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;"><a href="list_page.html" class="button_intro">Search</a> <a href="index_8.html#0" class="button_intro outline">Read more</a></p>
-</div>
-</div>
-
-</div><!-- End layerslider -->
-<!--
-<section class="parallax-window" id="home" data-parallax="scroll" data-image-src="img/sub_header_home.jpg" data-natural-width="1400" data-natural-height="550">
-<div id="subheader">
-    <div id="sub_content">
-        <h2 class="home-heading">Cakes at your Doorstep</h1>
-<p> Choose your emirate from below select box</p>
-        <form method="post" action="">
+        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
             <div id="custom-search-input">
-                <div class="input-group">
-                <select class="search-query" onchange="location = this.value;">
-                  <option value="" disabled selected>Select your emirate</option>
-                  @foreach ($emirates as $emirate)
-                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                  @endforeach
+              <div class="input-group col-md-12 col-sm-12">
+              <select class="search-query" onchange="location = this.value;">
+                <option value="" disabled selected>Select your emirate</option>
+                @foreach ($emirates as $emirate)
+                  <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+                @endforeach
 
-                </select>
+              </select>
 
-                </div>
+              </div>
             </div>
-        </form>
-    </div><!-- End sub_content
-</div> End subheader -->
-<!--<div id="count" class="hidden-xs">
-    <ul>
-        <li><span class="number">2650</span> Restaurant</li>
-        <li><span class="number">5350</span> People Served</li>
-        <li><span class="number">12350</span> Registered Users</li>
-    </ul>
-</div>-->
+        </form></div>
+</div>
+
+</div>
+
 </section><!-- End section -->
 <!-- End SubHeader ============================================ -->
 

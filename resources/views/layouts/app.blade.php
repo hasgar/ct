@@ -54,10 +54,8 @@
             <div class="col-md-12">
                 <div id="social_footer">
                     <ul>
-                        <li><a href="#0"><i class="icon-facebook"></i></a></li>
-                        <li><a href="#0"><i class="icon-twitter"></i></a></li>
-                        <li><a href="#0"><i class="icon-google"></i></a></li>
-                        <li><a href="#0"><i class="icon-instagram"></i></a></li>
+                        <li><a href="http://www.facebook.com/caketreeuae" target="_blank"><i class="icon-facebook"></i></a></li>
+                        <li><a href="http://www.instagram.com/caketree.uae" target="_blank"><i class="icon-instagram"></i></a></li>
                     </ul>
                     <p>
                         © CakeTree 2017

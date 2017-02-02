@@ -120,11 +120,12 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
       'timeslot' => 'required|exists:timeslots,id',
       'payment_type' => 'required|in:cod,online',
     ]);
+
     if (Auth::check())
     {
       $userId = Auth::user()->id;
     } else {
-      $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])["id"];
+      $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])[0]["id"];
     }
 
     $cart = Session::get('cart');
@@ -217,16 +218,17 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
         $user = User::where('id',$order["user_id"])->first();
         $emirate = Emirates::where('id',$order["emirate_id"])->first();
         $timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
-        Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+       Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
           {
-          $message->from('orders@caketreeonline.com')->to('orders@caketreeonline.com','New Order')
+          $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'New Order')
           ->subject('New Order');
           });
-        Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+       Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
           {
           $message->from('orders@caketreeonline.com')->to($user["email"],'CakeTree Order')
           ->subject('CakeTree Order Invoice');
-          });
+        }); 
+         Session::forget('cart');
         return redirect('/confirmed');
 
  }

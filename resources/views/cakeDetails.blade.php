@@ -63,25 +63,11 @@ class="nav-top-bg"
     <div class="box_style_2">
       <h2 class="inner cake-details">{{$cake["name"]}} <i class="icon_info_alt pull-right"></i></h2>
 
-                <div id="Img_carousel" class="slider-pro">
-                    <div class="sp-slides">
-
-                        <div class="sp-slide">
-                            <img alt="" class="sp-image" src="css/images/blank.gif"
-                            data-src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_large_1.jpg">
-                        </div>
-
-                    </div>
-
-                </div>
+                <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_large_1.jpg" class="img-responsive" />
                 @if ($cake["description"])
                 <h3>Description</h3>
     {{$cake["description"]}}
       @endif
-
-
-
-
     </div><!-- End box_style_1 -->
   </div>
 

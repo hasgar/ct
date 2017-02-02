@@ -54,7 +54,7 @@ class="nav-top-bg"
     </blockquote>
     @endif
 <ul class="nav nav-tabs">
-                      <li class="active"><a class="cake-type-tabs" href="#normal" data-toggle="tab" aria-expanded="true"><i class=" icon-db-shape"></i> Normal Cakes</a></li>
+                      <li class="active"><a class="cake-type-tabs" href="#normal" data-toggle="tab" aria-expanded="true"><i class=" icon-db-shape"></i> Regular Cakes</a></li>
                       <li class=""><a class="cake-type-tabs" href="#photo" data-toggle="tab" aria-expanded="false"><i class="icon-picture"></i> Photo Cakes</a></li>
                       <li class=""><a class="cake-type-tabs" href="#theme" data-toggle="tab" aria-expanded="false"><i class="icon-heart"></i> Theme Cakes</a></li>
                   </ul>
