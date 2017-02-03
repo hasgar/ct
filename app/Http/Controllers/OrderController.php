@@ -67,9 +67,10 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
     {
       $this->validate($request, [
         'id' => 'required|exists:orders,id',
-        'status_id' => 'required|exists:status,id',
-        'token' => 'required',
+        'status' => 'required|exists:status,id',
+        't' => 'required',
       ]);
+
     }
    public function addToCart(Request $request)
    {
