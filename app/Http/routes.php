@@ -20,7 +20,6 @@ Route::get('/about-us', function () {
 });
 
 Route::auth();
-changeStatus/12/9XY3S5kcUq/2
 Route::get('/', 'HomeController@index');
 Route::get('/cakes', 'CakeController@index');
 Route::get('/changeStatus/{id}/{t}/{status}', 'OrderController@changeStatus')->where('id', '[0-9]+')->where('status', '[0-9]+');
