@@ -66,12 +66,13 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
     public function changeStatus(Request $request)
     {
 
-      return $this->validate($request, [
-        'id' => 'required|exists:orders,id',
-        'status' => 'required|exists:status,id',
-        't' => 'required',
-      ]);
 
+      if (Orders::where("token",$request->token)->count() > 0) {
+      OrderStatus::create(['order_id' => $request->id, 'status_id' => $request->status]);
+      Orders::where('id', $request->id)
+          ->update(['status_id' => $request->id]);
+    }
+    return "Done";
     }
    public function addToCart(Request $request)
    {
