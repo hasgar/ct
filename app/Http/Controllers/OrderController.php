@@ -65,8 +65,8 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
 
     public function changeStatus(Request $request)
     {
-      return "sdsd";
-      $this->validate($request, [
+
+      return $this->validate($request, [
         'id' => 'required|exists:orders,id',
         'status' => 'required|exists:status,id',
         't' => 'required',
