@@ -23,7 +23,7 @@ Route::auth();
 changeStatus/12/9XY3S5kcUq/2
 Route::get('/', 'HomeController@index');
 Route::get('/cakes', 'CakeController@index');
-Route::get('/changeStatus/{id}-{token}-{status_id}', 'OrderController@changeStatus')->where('id', '[0-9]+')->where('status_id', '[0-9]+');
+Route::get('/changeStatus/{id}/{token}/{status_id}', 'OrderController@changeStatus');
 Route::get('/buy-cake-{emirate}', 'CakeController@index')->where('emirate', '[A-Za-z]+');
 Route::get('/buy-{name}-cake-{emirate}-online-{id}', 'CakeController@cakeDetails')->where('id', '[0-9]+')->where('name', '[A-Za-z]+')->where('emirate', '[A-Za-z]+');
 Route::get('/{name}-cake-{id}', 'CakeController@cakeDetails')->where('id', '[0-9]+')->where('emirate', '[A-Za-z]+');
