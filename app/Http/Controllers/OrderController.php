@@ -224,7 +224,7 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
           });
        Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
           {
-          $message->from('orders@caketreeonline.com')->to($user["email"],'CakeTree Order')
+          $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'CakeTree Order')
           ->subject('CakeTree Order Invoice');
         });
          Session::forget('cart');
