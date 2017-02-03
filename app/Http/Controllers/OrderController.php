@@ -126,7 +126,6 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
     } else {
       $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])["id"];
     }
-    
 
     $cart = Session::get('cart');
     if (count($cart) < 1)
