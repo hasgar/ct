@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function createTempUser($name, $email) {
       if (User::where("email",$email)->count() > 0)
-          return User::where("email",$email)->get();
+          return User::where("email",$email)->first();
       return User::create(['name' => $name, 'email' => $email,'password'=>bcrypt($this->generateRandomString())]);
     }
 

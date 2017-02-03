@@ -107,8 +107,7 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
   }
 
   public function placeOrder(Request $request) {
-return (new UserController)->createTempUser("sdd","sddd@sd.cccc");
-    $this->validate($request, [
+  $this->validate($request, [
       'your_name' => 'required',
       'flat_no_builder' => 'required',
       'street_address' => 'required',
@@ -125,9 +124,9 @@ return (new UserController)->createTempUser("sdd","sddd@sd.cccc");
     {
       $userId = Auth::user()->id;
     } else {
-      $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])[0]["id"];
+      $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])["id"];
     }
-    return $userId;
+    
 
     $cart = Session::get('cart');
     if (count($cart) < 1)
