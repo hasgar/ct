@@ -107,7 +107,7 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
   }
 
   public function placeOrder(Request $request) {
-
+return (new UserController)->createTempUser("sdd","sddd@sd.cccc");
     $this->validate($request, [
       'your_name' => 'required',
       'flat_no_builder' => 'required',
