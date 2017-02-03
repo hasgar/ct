@@ -127,6 +127,7 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
     } else {
       $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])[0]["id"];
     }
+    return $userId;
 
     $cart = Session::get('cart');
     if (count($cart) < 1)
@@ -227,7 +228,7 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
           {
           $message->from('orders@caketreeonline.com')->to($user["email"],'CakeTree Order')
           ->subject('CakeTree Order Invoice');
-        }); 
+        });
          Session::forget('cart');
         return redirect('/confirmed');
 
