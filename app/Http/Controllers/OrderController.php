@@ -62,6 +62,15 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
         $shipping = ShippingType::get();
         return view('checkout')->with('items',$items)->with('emirates',$emirates)->with('shipping',$shipping)->with('timeslots',$this->getTimeslots());
     }
+
+    public function changeStatus(Request $request)
+    {
+      $this->validate($request, [
+        'id' => 'required|exists:orders,id',
+        'status_id' => 'required|exists:status,id',
+        'token' => 'required',
+      ]);
+    }
    public function addToCart(Request $request)
    {
 
