@@ -109,7 +109,7 @@ class="nav-top-bg"
                         <div class="container margin_30">
                           <div class="main_title margin_mobile">
                                       <h2 class="nomargin_top">Make your Photo Cake</h2>
-                                                    <div class="nomargin_top opening cake-price">Flavour + {{$photo_charge}} AED / Kg</div>
+                                                    <div class="nomargin_top opening cake-price">Regular + {{$photo_charge}} AED / Kg</div>
                                   </div>
                           <div class="row">
                               <div class="col-md-8 col-md-offset-2">
@@ -229,7 +229,7 @@ foreach( $theme_cakes as $cake )
 
         <h3 class="cake-name">{{$cake["name"]}}</h3>
 
-        <div class="opening cake-price">Flavour + {{round($cake["shaped_amount"])}} AED / Kg</div>
+        <div class="opening cake-price">Regular + {{round($cake["shaped_amount"])}} AED / Kg</div>
 
       </div>
     </a><!-- End strip_list-->

@@ -39,6 +39,11 @@ font-size: 20px;
 }
 .old-price {     color: #e27474;
     text-decoration: line-through; }
+.cake-price-top {
+  font-family: Buda;
+    font-size: 17px;
+    color: #b55762;
+}
 .select-emirate-form {
       margin-top: 15%;
 

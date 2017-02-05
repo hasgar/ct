@@ -61,7 +61,7 @@ class="nav-top-bg"
 
   <div class="col-md-8">
     <div class="box_style_2">
-      <h2 class="inner cake-details">{{$cake["name"]}} <i class="icon_info_alt pull-right"></i></h2>
+      <h2 class="inner cake-details">{{$cake["name"]}} <span class="cake-price-top">- <?php if($cake["is_shaped"] == true) echo "Regular +"; ?> {{round($cake["amount"])}} AED</span> <i class="icon_info_alt pull-right"></i></h2>
 
                 <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_large_1.jpg" class="img-responsive" />
                 @if ($cake["description"])
@@ -75,7 +75,7 @@ class="nav-top-bg"
   <div class="col-md-4">
 
     <div class="box_style_2 bg-box">
-      <h2 class="inner">Buy this cake - {{round($cake["amount"])}} AED <i class="icon_cog pull-right"></i></h2>
+      <h2 class="inner">Buy this cake <i class="icon_cog pull-right"></i></h2>
       <form action="/addCakeToCart" method="POST" class="popup-form margin-buy-10" id="myLogin">
         {{ csrf_field() }}
         <input type="hidden" name="id" id="cake-id" value="{{$cake['id']}}" />
