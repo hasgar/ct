@@ -75,7 +75,7 @@ class="nav-top-bg"
   <div class="col-md-4">
 
     <div class="box_style_2 bg-box">
-      <h2 class="inner">Buy this cake <i class="icon_cog pull-right"></i></h2>
+      <h2 class="inner">Buy this cake - {{$cake["amount"]}} AED <i class="icon_cog pull-right"></i></h2>
       <form action="/addCakeToCart" method="POST" class="popup-form margin-buy-10" id="myLogin">
         {{ csrf_field() }}
         <input type="hidden" name="id" id="cake-id" value="{{$cake['id']}}" />

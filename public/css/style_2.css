@@ -37,7 +37,8 @@ font-weight: bold;
 font-size: 20px;
 
 }
-
+.old-price {     color: #e27474;
+    text-decoration: line-through; }
 .select-emirate-form {
       margin-top: 15%;
 

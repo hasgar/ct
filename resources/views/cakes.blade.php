@@ -85,7 +85,7 @@ class="nav-top-bg"
 
                                     <h3 class="cake-name">{{$cake["name"]}}</h3>
 
-                                    <div class="opening cake-price">{{$cake["amount"]}} AED</div>
+                                    <div class="opening cake-price">@if ($cake["id"] == 13)<span class="old-price">125</span>@endif {{$cake["amount"]}} AED</div>
 
                                   </div>
                                 </a><!-- End strip_list-->
