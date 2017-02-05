@@ -76,7 +76,7 @@ class="nav-top-bg"
                             ?>
                             <div class="col-md-3 col-sm-3">
                               <a class="hide-this" href="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}-cake-{{$cake["id"]}}">{{$cake["name"]}}</a>
-                                <a class="strip_list grid" href="#0" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{$cake["amount"]}}" data-min="{{$cake["minimum_kg"]}}" data-id="{{$cake["id"]}}" data-type="normal">
+                                <a class="strip_list grid" href="#0" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{round($cake["amount"])}}" data-min="{{$cake["minimum_kg"]}}" data-id="{{$cake["id"]}}" data-type="normal">
 
                                   <div class="desc">
                                       <div class="col-md-12 cake-block">
@@ -163,7 +163,7 @@ class="nav-top-bg"
                                           <select type="text" class="form-control" required id="flavour" name="flavour" >
                                               <option value="" disabled selected>Select Flavour</option>
                                               @foreach ($theme_flavours as $flavour)
-                                              <option value="{{$flavour["id"]}}" data-price="{{$flavour["amount"]}}">{{$flavour["name"]}} - {{$flavour["amount"]}} AED</option>
+                                              <option value="{{$flavour["id"]}}" data-price="{{round($flavour["amount"])}}">{{$flavour["name"]}} - {{round($flavour["amount"])}} AED</option>
                                               @endforeach
                                           </select>
                                         </div>
@@ -221,7 +221,7 @@ foreach( $theme_cakes as $cake )
   }
 ?>
 <div class="col-md-3 col-sm-3">
-    <a class="strip_list grid" href="#0" data-min="{{$cake["minimum_kg"]}}" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{$cake["amount"]}}" data-id="{{$cake["id"]}}" data-type="theme">
+    <a class="strip_list grid" href="#0" data-min="{{$cake["minimum_kg"]}}" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{round($cake["amount"])}}" data-id="{{$cake["id"]}}" data-type="theme">
         <div class="desc">
           <div class="col-md-12 cake-block">
               <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_small_1.jpg" class="img-responsive">
@@ -229,7 +229,7 @@ foreach( $theme_cakes as $cake )
 
         <h3 class="cake-name">{{$cake["name"]}}</h3>
 
-        <div class="opening cake-price">Flavour + {{$cake["shaped_amount"]}} AED / Kg</div>
+        <div class="opening cake-price">Flavour + {{round($cake["shaped_amount"])}} AED / Kg</div>
 
       </div>
     </a><!-- End strip_list-->
@@ -270,12 +270,12 @@ if ($count%4 != 1) echo "</div>"; ?>
           <select class="form-control form-white no-bottom-margin" name="flavour" id="theme-flavour">
             <option value="" disabled selected>Select Cake Flavour</option>
             @foreach ($theme_flavours as $flavour)
-            <option data-price="{{$flavour["amount"]}}" value="{{$flavour["id"]}}">{{$flavour["name"]}} - {{$flavour["amount"]}} AED</option>
+            <option data-price="{{round($flavour["amount"])}}" value="{{$flavour["id"]}}">{{$flavour["name"]}} - {{round($flavour["amount"])}} AED</option>
             @endforeach
 
           </select>
           <div class="col-md-6 col-sm-6 no-left-padding">
-            <select  class="form-control" id="cake_kg" name="kg" autocomplete="off">
+            <select  class="form-control form-white" id="cake_kg" name="kg" autocomplete="off">
               <option value="" selected disabled="">Select KG</option>
               <option value="1">1</option>
               <option value="1.5">1.5</option>
@@ -289,7 +289,7 @@ if ($count%4 != 1) echo "</div>"; ?>
             </select>
           </div>
           <div class="col-md-6 col-sm-6 no-right-padding">
-            <select  class="form-control" id="quantity" name="quantity" autocomplete="off">
+            <select  class="form-control form-white" id="quantity" name="quantity" autocomplete="off">
               <option value="" selected disabled="">Select Quantity</option>
               <option value="1">1</option>
               <option value="2">2</option>

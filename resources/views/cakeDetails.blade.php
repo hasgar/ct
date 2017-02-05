@@ -75,7 +75,7 @@ class="nav-top-bg"
   <div class="col-md-4">
 
     <div class="box_style_2 bg-box">
-      <h2 class="inner">Buy this cake - {{$cake["amount"]}} AED <i class="icon_cog pull-right"></i></h2>
+      <h2 class="inner">Buy this cake - {{round($cake["amount"])}} AED <i class="icon_cog pull-right"></i></h2>
       <form action="/addCakeToCart" method="POST" class="popup-form margin-buy-10" id="myLogin">
         {{ csrf_field() }}
         <input type="hidden" name="id" id="cake-id" value="{{$cake['id']}}" />
@@ -84,13 +84,13 @@ class="nav-top-bg"
         <select class="form-control form-white no-bottom-margin" name="flavour" required>
           <option value="" disabled selected>Select Cake Flavour</option>
           @foreach ($theme_flavours as $flavour)
-          <option data-price="{{$flavour["amount"]}}" value="{{$flavour["id"]}}">{{$flavour["name"]}} - {{$flavour["amount"]}} AED</option>
+          <option data-price="{{round($flavour["amount"])}}" value="{{$flavour["id"]}}">{{$flavour["name"]}} - {{round($flavour["amount"])}} AED</option>
           @endforeach
         </select>
         @endif
 
         <div class="col-md-6 col-sm-6 no-left-padding">
-          <select  class="form-control" id="kg" name="kg" autocomplete="off">
+          <select  class="form-control form-white" id="kg" name="kg" autocomplete="off">
             <option value="" selected disabled="">Select KG</option>
             <option value="1">1</option>
             <option value="1.5">1.5</option>
@@ -104,8 +104,8 @@ class="nav-top-bg"
           </select>
         </div>
         <div class="col-md-6 col-sm-6 no-right-padding">
-          <select  class="form-control" id="quantity" name="quantity" autocomplete="off">
-            <option value="" selected disabled="">Select Quantity</option>
+          <select  class="form-control form-white" id="quantity" name="quantity" autocomplete="off">
+            <option value="" selected disabled="">Select Qty</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
