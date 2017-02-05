@@ -16,7 +16,6 @@
 
 @section('extra_css')
 
-
 <link href="layerslider/css/layerslider.css" rel="stylesheet">
 
 @endsection
@@ -27,9 +26,33 @@
 
 @endsection
 
+@section('select-form')
+<div align="center">
+<form method="post" class="select-emirate-form">
+    <div id="custom-search-input">
+        <div class="input-group col-md-12 col-sm-12">
+        <select class="form-control col-md-12 col-sm-12 select-emirate-select" onchange="location = this.value;">
+          <option value="" disabled selected>Select your emirate</option>
+          @foreach ($emirates as $emirate)
+            <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
+          @endforeach
+
+        </select>
+
+        </div>
+    </div>
+</form>
+</div>
+
+@endsection
+
 @section('content')
 
+
+
+
 <!-- SubHeader =============================================== -->
+
 <div id="full-slider-wrapper">
 <div id="layerslider" style="width:100%;height:600px;">
     <!-- first slide -->
@@ -37,20 +60,7 @@
         <img src="img/slides/slide_1.jpg" class="ls-bg" alt="Slide background">
       <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" ><strong>Enjoy</strong> a quick friends dinner</h3>
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
-        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
-            <div id="custom-search-input">
-                <div class="input-group col-md-12 col-sm-12">
-                <select class="form-control col-md-12 col-sm-12"onchange="location = this.value;">
-                  <option value="" disabled selected>Select your emirate</option>
-                  @foreach ($emirates as $emirate)
-                    <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                  @endforeach
 
-                </select>
-
-                </div>
-            </div>
-        </form>
 </div>
 
     <!-- second slide -->
@@ -58,21 +68,7 @@
         <img  src="img/slides/slide_4.jpg" class="ls-bg" alt="Slide background">
       <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Quick &amp; <strong>affordable</strong> quick food</h3>
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
-        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
-            <div id="custom-search-input">
-              <div class="input-group col-md-12 col-sm-12">
 
-                <select class=" form-control"  onchange="location = this.value;">
-                <option value="" disabled selected>Select your emirate</option>
-                @foreach ($emirates as $emirate)
-                  <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                @endforeach
-
-              </select>
-
-              </div>
-            </div>
-        </form>
 </div>
 
  <!-- third slide -->
@@ -80,20 +76,7 @@
          <img src="img/slides/slide_2.jpg" class="ls-bg" alt="Slide background">
       <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" ><strong>Great</strong> Food Quality &amp; Variety</h3>
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
-        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
-            <div id="custom-search-input">
-              <div class="input-group col-md-12 col-sm-12">
-              <select class=" form-control" onchange="location = this.value;">
-                <option value="" disabled selected>Select your emirate</option>
-                @foreach ($emirates as $emirate)
-                  <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                @endforeach
 
-              </select>
-
-              </div>
-            </div>
-        </form>
 
     </div>
 
@@ -102,20 +85,7 @@
     <img src="img/slides/slide_3.jpg" class="ls-bg" alt="Slide background">
       <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Stop your <strong>hunger</strong> quickly</h3>
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
-        <form method="post" action="" class="ls-l" style="top:64%; left:50%;" data-ls="durationin:2000;delayin:1300;easingin:easeOutElastic;">
-            <div id="custom-search-input">
-              <div class="input-group col-md-12 col-sm-12">
-              <select class=" form-control" onchange="location = this.value;">
-                <option value="" disabled selected>Select your emirate</option>
-                @foreach ($emirates as $emirate)
-                  <option value="/buy-cake-{{str_replace(' ', '', strtolower($emirate['name']))}}">{{$emirate['name']}}</option>
-                @endforeach
-
-              </select>
-
-              </div>
-            </div>
-        </form></div>
+        </div>
 </div>
 
 </div>

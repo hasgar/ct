@@ -73,7 +73,7 @@ class CartController extends Controller
 
   }
 
-  public static function getItemAmount($id,$quantity,$kg,$type) {
+  public static function getItemAmount($id,$quantity,$kg,$type, $flavour_id = 0) {
 
     $settings = Settings::first();
     $total = 0;
@@ -97,7 +97,7 @@ class CartController extends Controller
     if ($type == "theme") {
 
         $total = $total +  ($cake['shaped_amount'] * $kg * $quantity);
-        $flavour = Cakes::where('id',$c['flavour_id'])->first();
+        $flavour = Cakes::where('id',$flavour_id)->first();
         $total = $total +  ($flavour["amount"] * $kg * $quantity);
     }
     return $total;

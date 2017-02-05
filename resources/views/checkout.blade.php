@@ -62,20 +62,18 @@ class="nav-top-bg"
 				<div class="box_style_2 hidden-xs info">
 					<h4 class="nomargin_top">Delivery time <i class="icon_clock_alt pull-right"></i></h4>
 					<p>
-						Lorem ipsum dolor sit amet, in pri partem essent. Qui debitis meliore ex, tollit debitis conclusionemque te eos.
-					</p>
+						We take 4 hours to deliver our Regular akes, and its Completely free.	</p>
 					<hr>
-					<h4>Secure payment <i class="icon_creditcard pull-right"></i></h4>
+					<h4>CASH ON DELIVERY <i class="icon_creditcard pull-right"></i></h4>
 					<p>
-						Lorem ipsum dolor sit amet, in pri partem essent. Qui debitis meliore ex, tollit debitis conclusionemque te eos.
-					</p>
+				 We provide only Cash On Delivery to make you feel more secure and happy</p>
 				</div><!-- End box_style_1 -->
 
 				<div class="box_style_2 hidden-xs" id="help">
 					<i class="icon_lifesaver"></i>
 					<h4>Need <span>Help?</span></h4>
-					<a href="tel://004542344599" class="phone">+45 423 445 99</a>
-					<small>Monday to Friday 9.00am - 7.30pm</small>
+          <a href="tel://00971543354175" class="phone">+971543354175</a>
+          <small>Saturday to Thursday 9.00am - 9.00pm</small>
 				</div>
 
 			</div><!-- End col-md-3 -->
@@ -195,7 +193,7 @@ class="nav-top-bg"
 							<a href="/removeFromCart/{{$items[$i]["_id"]}}" class="remove_item"><i class="icon_minus_alt"></i></a> <strong>{{$items[$i]["quantity"]}}x</strong><?php if($items[$i]["type"] == "photo") echo '<i class="icon-picture"></i>'; if($items[$i]["type"] == "theme") echo '<i class="icon-heart"></i>'; ?> {{ CakeController::getCakeNameById($items[$i]["id"]) }}
 						</td>
             <td>
-							<strong class="pull-right">{{ CartController::getItemAmount($items[$i]["id"],$items[$i]["quantity"],$items[$i]["kg"],$items[$i]["type"]) }} AED</strong>
+							<strong class="pull-right"><?php if($items[$i]["type"] == "theme") { echo CartController::getItemAmount($items[$i]["id"],$items[$i]["quantity"],$items[$i]["kg"],$items[$i]["type"],$items[$i]["flavour_id"]); } else { echo CartController::getItemAmount($items[$i]["id"],$items[$i]["quantity"],$items[$i]["kg"],$items[$i]["type"]); } ?> AED</strong>
 						</td>
 					</tr>
             @endfor

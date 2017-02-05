@@ -27,6 +27,22 @@
   }
  #position { margin-top:65px !important; }
 }
+.select-emirate-form {
+      margin-top: 15%;
+
+}
+.select-emirate-select {
+
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      border-radius: 30px;
+      -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,.75);
+      -moz-box-shadow: 0 0 50px 0 rgba(0,0,0,.75);
+      box-shadow: 0 0 50px 0 rgba(0,0,0,.75);
+
+    font-size: 18px !important;
+    font-family: 'Cinzel' !important;
+}
 .error_points > li { color:#dc094e; }
 h1, h2, h3, h4 { font-family: 'Cinzel' !important; }
 p { font-family: 'buda' !important; }

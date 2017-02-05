@@ -65,8 +65,6 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
 
     public function changeStatus(Request $request)
     {
-
-
       if (Orders::where("token",$request->token)->count() > 0) {
       OrderStatus::create(['order_id' => $request->id, 'status_id' => $request->status]);
       Orders::where('id', $request->id)
@@ -81,8 +79,9 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
        'kg' => 'required|digits_between:0,1000',
        'quantity' => 'integer|required|digits_between:1,1000',
        'type' => 'required|in:normal,photo,theme',
-       //'id' => 'required|not_in:0|exist:cakes,id',
+       'id' => 'required|not_in:0|exists:cakes,id',
      ]);
+
      if ($request->hasFile('photo') && $request['type'] == "photo") {
        $extension = $request->file('photo')->getClientOriginalExtension();
        $destinationPath = 'uploads/';
@@ -197,6 +196,7 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
         $falvour_id = 0;
         if ($item["type"] == "theme") {
           $falvour_id = $item["flavour"];
+          $cake_total = (new CartController)->getItemAmount($item["id"],$item["quantity"],$item["kg"],$item["type"],$item["flavour_id"]);
         }
 
       $orderCakes = OrderCakes::create([

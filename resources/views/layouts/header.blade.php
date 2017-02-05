@@ -114,6 +114,8 @@
   </div><!-- End row -->
 </div><!-- End container -->
 
+@yield('select-form')
+
 
 </header>
 <!-- End Header =============================================== -->
