@@ -71,13 +71,14 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
           ->update(['status_id' => $request->id]);
     }
     return "Done";
+
     }
    public function addToCart(Request $request)
    {
 
      $this->validate($request, [
-       'kg' => 'required|digits_between:0,1000',
-       'quantity' => 'integer|required|digits_between:1,1000',
+       'kg' => 'required|in:1,2,5',
+       'quantity' => 'integer|required|digits_between:1,10',
        'type' => 'required|in:normal,photo,theme',
        'id' => 'required|not_in:0|exists:cakes,id',
      ]);
