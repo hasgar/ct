@@ -16,6 +16,7 @@
 
 @section('extra_css')
 
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type='text/css'>
     <!-- Radio and check inputs -->
     <link href="css/skins/square/grey.css" rel="stylesheet">
 

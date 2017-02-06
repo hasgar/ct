@@ -13,6 +13,7 @@
 <meta name="google-site-verification" content="nMmm05VwyjReL2FIfWUO-m3YM8jdG9lJcYpn-NT-lDw" />
     <!-- GOOGLE WEB FONT -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,300,300italic' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes%7CBuda:300%7CCinzel" media="all">
     <!-- BASE CSS -->
     <link href="css/base_2.css" rel="stylesheet">

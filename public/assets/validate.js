@@ -6,10 +6,24 @@ jQuery(document).ready(function(){
 		$('#select-shipping-type-first').hide();
 		$('.timeslots').hide();
 
-		$('#timeslot > option').each(function(index, element) {
+		/*$('#timeslot > option').each(function(index, element) {
     	if ($(element).data('type') == $('#shipping').val())
 				$(element).show();
-		});
+		}); */
+
+		$(function(){ // DOM is ready
+
+    var myOptions = [] ;
+
+    $('#timeslot option').each(function(){
+       $(this).show();
+    });
+
+
+
+});
+
+
 	})
 
 	$('#timeslot').on('change', function() {

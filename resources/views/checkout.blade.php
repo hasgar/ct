@@ -62,7 +62,7 @@ class="nav-top-bg"
 				<div class="box_style_2 hidden-xs info">
 					<h4 class="nomargin_top">Delivery time <i class="icon_clock_alt pull-right"></i></h4>
 					<p>
-						We take 4 hours to deliver our Regular akes, and its Completely free.	</p>
+						We take 4 hours to deliver our Regular cakes, and its Completely Free.	</p>
 					<hr>
 					<h4>CASH ON DELIVERY <i class="icon_creditcard pull-right"></i></h4>
 					<p>
