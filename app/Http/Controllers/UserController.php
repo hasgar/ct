@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 use App\User;
 
+use Illuminate\Support\Facades\Mail;
+
 class UserController extends Controller
 {
     public function createTempUser($name, $email) {
@@ -25,13 +27,10 @@ class UserController extends Controller
           'email' => 'email',
           'message' => 'required',
         ]);
-   }
 
-
-  Mail::send('email.contact', ['message' => $request["messgae"], 'email' => $request["email"], 'name' => $request["name"], function($message)
+  Mail::send('email.contact', ['message' => $request["messgae"], 'email' => $request["email"], 'name' => $request["name"]], function($message)
      {
-     $message->from($request["email_order"])->to(['orders@caketreeonline.com'],'Contact form message')
-     ->subject('Contact form message');
+     $message->from($request["email_order"])->to(['orders@caketreeonline.com'],'Contact form message')->subject('Contact form message');
    });
 
 }
