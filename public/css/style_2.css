@@ -137,6 +137,10 @@ label, textarea, input { font-weight: 300; }
     background-color: #f8f8f8 !important;
     color: #504e4e  !important;
 }
+.contact-btn {
+    margin-bottom: 0px;
+}
+.contact-content { padding-top: 250px !important; }
 .hide-this {display: none;}
 .cake-name-cart { font-size: 12px !important;}
 .top-padding-220 { padding-top: 220px !important; }

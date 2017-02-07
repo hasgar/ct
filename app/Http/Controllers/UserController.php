@@ -11,19 +11,29 @@ use App\User;
 class UserController extends Controller
 {
     public function createTempUser($name, $email) {
-      if (User::where("email",$email)->count() > 0)
-          return User::where("email",$email)->first();
-      return User::create(['name' => $name, 'email' => $email,'password'=>bcrypt($this->generateRandomString())]);
-    }
-
-
-    public function generateRandomString($length = 10) {
-     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-     $charactersLength = strlen($characters);
-     $randomString = '';
-     for ($i = 0; $i < $length; $i++) {
-         $randomString .= $characters[rand(0, $charactersLength - 1)];
+      Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+         {
+         $message->from('orders@caketreeonline.com')->to([$request["email_order"]],'CakeTree Order')
+         ->subject('CakeTree Order Invoice');
+       });
      }
-     return $randomString;
+
+
+    public function sendMessage(Request $request) {
+      $this->validate($request, [
+          'name' => 'required',
+          'email' => 'email',
+          'message' => 'required',
+        ]);
    }
+
+
+  Mail::send('email.contact', ['message' => $request["messgae"], 'email' => $request["email"], 'name' => $request["name"], function($message)
+     {
+     $message->from($request["email_order"])->to(['orders@caketreeonline.com'],'Contact form message')
+     ->subject('Contact form message');
+   });
+
+}
+
 }
