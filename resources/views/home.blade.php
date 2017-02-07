@@ -57,36 +57,40 @@
 <div id="layerslider" style="width:100%;height:600px;">
     <!-- first slide -->
     <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
-        <img src="img/slides/slide_1.jpg" class="ls-bg" alt="Slide background">
-      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" ><strong>Enjoy</strong> a quick friends dinner</h3>
-        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+        <img src="img/slides/slider_1-min.jpg" class="ls-bg" alt="Slide background">
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >We Also Deliver to Your <strong>Office</strong></h3>
+        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
 
 </div>
 
     <!-- second slide -->
 <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
-        <img  src="img/slides/slide_4.jpg" class="ls-bg" alt="Slide background">
-      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Quick &amp; <strong>affordable</strong> quick food</h3>
-        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+        <img  src="img/slides/slider_2-min.jpg" class="ls-bg" alt="Slide background">
 
 </div>
 
  <!-- third slide -->
  <div class="ls-slide" data-ls="slidedelay:3000; transition2d:5;" >
-         <img src="img/slides/slide_2.jpg" class="ls-bg" alt="Slide background">
-      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" ><strong>Great</strong> Food Quality &amp; Variety</h3>
-        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
+         <img src="img/slides/slider_3-min.jpg" class="ls-bg" alt="Slide background">
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Fast & Free Delivery <strong>#CakesAtYourDoorStep</strong> </h3>
+        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
 
 
     </div>
 
-<!-- fourth slide -->
-<div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
-    <img src="img/slides/slide_3.jpg" class="ls-bg" alt="Slide background">
-      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Stop your <strong>hunger</strong> quickly</h3>
-        <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Quality Takeaway or Delivery Food online</p>
-        </div>
+    <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
+        <img src="img/slides/slider_4-min.jpg" class="ls-bg" alt="Slide background">
+
 </div>
+
+<div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
+    <img src="img/slides/slider_5-min.jpg" class="ls-bg" alt="Slide background">
+  <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Best Cakes, Best Price</h3>
+    <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
+
+</div>
+
+
 
 </div>
 
@@ -150,7 +154,7 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="box_home" id="one">
+                    <div class="box_home" id="two">
                         <h3>CASH ON DELIVERY</h3>
                         <p>
                           Dummy text here...
@@ -158,7 +162,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box_home" id="two">
+                    <div class="box_home" id="three">
                         <h3>100% Satisfication</h3>
                         <p>
                             Dummy text here...
@@ -166,7 +170,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="box_home" id="three">
+                    <div class="box_home" id="one">
                         <h3>Fast & Free Delivery</h3>
                         <p>
                             Dummy text here...
