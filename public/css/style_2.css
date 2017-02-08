@@ -140,6 +140,7 @@ label, textarea, input { font-weight: 300; }
 .contact-btn {
     margin-bottom: 0px;
 }
+#timeslot_data { display: none; }
 .contact-content { padding-top: 250px !important; }
 .hide-this {display: none;}
 .cake-name-cart { font-size: 12px !important;}

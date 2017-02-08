@@ -4,18 +4,12 @@ jQuery(document).ready(function(){
 	$('#shipping').on('change', function() {
 		$("#timeslot").val("");
 		$('#select-shipping-type-first').hide();
-$('.timeslots').hide();
-		/*$('#timeslot > option').each(function(index, element) {
+		$('.timeslots').hide();
+
+		$('#timeslot > option').each(function(index, element) {
     	if ($(element).data('type') == $('#shipping').val())
 				$(element).show();
-		}); */
-
-    $('#timeslot option').each(function(){
-       $(this).show();
-    });
-
-
-
+		});
 	})
 
 	$('#timeslot').on('change', function() {

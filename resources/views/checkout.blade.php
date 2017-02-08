@@ -163,6 +163,13 @@ class="nav-top-bg"
                               <option class="hide-this timeslots" <?php if($timeslot["hide"]) echo "disabled"; ?> value="{{$timeslot['id']}}" data-price="{{$timeslot['extra_amount']}}" data-from="{{$timeslot['extra_amount']}}" data-to="{{$timeslot['extra_amount']}}" data-type="{{$timeslot['shipping_type_id']}}">{{$timeslot['timeslot']}} - <?php if ($timeslot['extra_amount'] == 0) echo "FREE"; else echo $timeslot['extra_amount']." AED"; ?></option>
                             @endforeach
                         </select>
+                <select class="form-control" required name="timeslot_data" id="timeslot_data">
+                                    <option value="" disabled selected>Select Time slot</option>
+                                    <option value="" disabled id="select-shipping-type-first">Select Shipping type first</option>
+                                    @foreach ($timeslots as $timeslot)
+                                      <option class="hide-this timeslots_data" <?php if($timeslot["hide"]) echo "disabled"; ?> value="{{$timeslot['id']}}" data-price="{{$timeslot['extra_amount']}}" data-from="{{$timeslot['extra_amount']}}" data-to="{{$timeslot['extra_amount']}}" data-type="{{$timeslot['shipping_type_id']}}">{{$timeslot['timeslot']}} - <?php if ($timeslot['extra_amount'] == 0) echo "FREE"; else echo $timeslot['extra_amount']." AED"; ?></option>
+                                    @endforeach
+                                </select>
 					</div>
 </div>
           </div>
