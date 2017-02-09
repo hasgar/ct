@@ -47,9 +47,9 @@ class UserController extends Controller
           'message' => 'required',
         ]);
 
-  Mail::send('email.contact', ['message' => $request["messgae"], 'email' => $request["email"], 'name' => $request["name"]], function($message)
+  Mail::send('email.contact', ['message' => $request["messgae"], 'email' => $request["email"], 'name' => $request["name"]], function($message) use ($request)
      {
-     $message->from($request["email"])->to(['hasgardee@gmail.com'],'Contact form message')->subject('Contact form message');
+     $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'Contact form message')->subject('Contact form message');
    });
 
 }
