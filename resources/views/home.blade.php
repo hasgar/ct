@@ -66,13 +66,15 @@
     <!-- second slide -->
 <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
         <img  src="img/slides/slider_2-min.jpg" class="ls-bg" alt="Slide background">
+        <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Cake at your doorstep</h3>
+          <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
 
 </div>
 
  <!-- third slide -->
  <div class="ls-slide" data-ls="slidedelay:3000; transition2d:5;" >
          <img src="img/slides/slider_3-min.jpg" class="ls-bg" alt="Slide background">
-      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Fast & Free Delivery <strong>#CakesAtYourDoorStep</strong> </h3>
+      <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Fast & Free Delivery</h3>
         <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
 
 
@@ -144,7 +146,7 @@
     </div><!-- End row -->
 <br><br>
     <div class="main_title">
-              <h2 class="nomargin_top">Our feautures</h2>
+              <h2 class="nomargin_top">Our features</h2>
 
           </div>
 
@@ -157,15 +159,15 @@
                     <div class="box_home" id="two">
                         <h3>CASH ON DELIVERY</h3>
                         <p>
-                          Dummy text here...
+                          No Upfront Payment, Easy and Secured
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="box_home" id="three">
-                        <h3>100% Satisfication</h3>
+                        <h3>100% Satisfaction</h3>
                         <p>
-                            Dummy text here...
+                            We guarantee the quality and taste
                         </p>
                     </div>
                 </div>
@@ -173,7 +175,7 @@
                     <div class="box_home" id="one">
                         <h3>Fast & Free Delivery</h3>
                         <p>
-                            Dummy text here...
+                            No Hassle, Its fast & Free!
                         </p>
                     </div>
                 </div>
@@ -184,8 +186,8 @@
 <section class="parallax-window" data-parallax="scroll" data-image-src="img/bg_office.jpg" data-natural-width="1200" data-natural-height="600">
 <div class="parallax-content">
     <div class="sub_content">
-        <i class="icon_mug"></i>
-        <h3>We also deliver to your office</h3>
+        <i class="icon-back-in-time"></i>
+        <h3>JUST 90 SECONDS TO ORDER A CAKE</h3>
 
     </div><!-- End sub_content -->
 </div><!-- End subheader -->

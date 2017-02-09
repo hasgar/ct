@@ -3,7 +3,7 @@
 
 
 @section('meta')
-  <title>Contact Us</title>
+  <title>About Us</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,12 +39,18 @@ class="nav-top-bg"
     @endif
 	<div class="row" id="contacts">
     	<div class="col-md-6 col-sm-6">
-        	<div class="box_style_2">
-            	<h2 class="inner">Customer support</h2>
-                <p class="add_bottom_30">Adipisci conclusionemque ea duo, quo id fuisset prodesset, vis ea agam quas. <strong>Lorem iisque periculis</strong> id vis, no eum utinam interesset. Quis voluptaria id per, an nibh atqui vix. Mei falli simul nusquam te.</p>
-                <p><a href="tel://00971543354175" class="phone"><i class="icon-phone-circled"></i>  +971543354175</a></p>
-                <p class="nopadding"><a href="mailto:contact@caketreeonline.com"><i class="icon-mail-3"></i> contact@caketreeonline.com</a></p>
-            </div>
+        	<div class="box_style_2 about-us">
+            	<h2 class="inner">About Us</h2>
+              <p>Someone once said, a party without a cake is just a meeting. And how we agree to it.</p>
+              <p>Tired of going through a million places to find that one perfect cake? Looking for the perfect cake to be delivered to surprise your friend? As cliché as it sounds, your find ends here at 'Cake Tree'.</p>
+              <p>Cake Tree features carefully crafted cakes from the best in the business in and around UAE. We make sure our cakes looks great ( after all it has to be insta-worthy, right) and tastes even better. Top chefs, best ingredients, made with lots of love - our cakes are sure to be devoured by the young and old alike.</p>
+              <p>You can choose from our vast menu of the regular cakes plus a few of our super hit innovative flavours. Our website, one of the best in terms of being user friendly helps with processing your orders in the best possible manner. Quick and easy - try it to see for yourself.
+</p>
+<p>At Cake Tree, we promise quality and prompt customer care. Because we know how important a deliciously gorgeous cake is!</p>
+<p>Efficiently packed, free and hassle - free door to door delivery makes your last minute party plans easier and delicious.
+</p>
+<p>Let's get the party started!</p>
+              </div>
     	</div>
 
         <div class="col-md-6 col-sm-6">

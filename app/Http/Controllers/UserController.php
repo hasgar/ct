@@ -8,16 +8,35 @@ use App\Http\Requests;
 
 use App\User;
 
+use Illuminate\Support\Facades\Hash;
+
+
 use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
+  public function test() {
+    echo $this->createTempUser("Hasssgasr", "hasshashshs@sdsd.cc");
+  }
     public function createTempUser($name, $email) {
-      Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
+
+      if (User::where('email',$email)->count() > 0) {
+        return User::where('email',$email)->first();
+      } else {
+        $password = Hash::make(str_random(8));
+
+        $user = User::create([
+          'email' => $email,
+          'name' => $name,
+          'password' => $password
+        ]);
+        Mail::send('email.newUser', ['email' => $email, 'password' => $password, 'name' => $name], function($message) use ($email)
          {
-         $message->from('orders@caketreeonline.com')->to([$request["email_order"]],'CakeTree Order')
-         ->subject('CakeTree Order Invoice');
-       });
+         $message->from('order@caketreeonline.com')->to([$email],'New Account Created with Cake Tree')->subject('New Account Created with Cake Tree');
+         });
+         return $user;
+      }
+
      }
 
 
