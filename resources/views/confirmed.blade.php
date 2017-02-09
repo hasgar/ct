@@ -37,40 +37,11 @@ class="nav-top-bg"
 				<div id="confirm">
 					<i class="icon_check_alt2"></i>
 					<h3>Thank you!</h3>
-					<p>
-						Lorem ipsum dolor sit amet, nostrud nominati vis ex, essent conceptam eam ad. Cu etiam comprehensam nec. Cibo delicata mei an, eum porro legere no.
-					</p>
+	<h4>Your Order ID: {{$orderId}}</h4>
+  <p>Please note it for future reference</p>
 				</div>
-				<h4>Summary</h4>
-				<table class="table table-striped nomargin">
-				<tbody>
-				<tr>
-					<td>
-						<strong>1x</strong> KitKat Chocolate
-					</td>
-					<td>
-						<strong class="pull-right">99 AED</strong>
-					</td>
-				</tr>
-
-				<tr>
-					<td>
-						 Delivery Charge
-					</td>
-					<td>
-						<strong class="pull-right">10 AED</strong>
-					</td>
-				</tr>
-				<tr>
-					<td class="total_confirm">
-						 TOTAL
-					</td>
-					<td class="total_confirm">
-						<span class="pull-right">109 AED</span>
-					</td>
-				</tr>
-				</tbody>
-				</table>
+			<a href="/cakes" class="btn_full">Buy another cake</a>
+      <a class="btn_full_outline" href="/"><i class="icon-right"></i> Back to home</a>
 			</div>
 		</div>
 	</div><!-- End row -->
