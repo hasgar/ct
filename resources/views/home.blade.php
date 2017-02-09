@@ -187,7 +187,7 @@
 <div class="parallax-content">
     <div class="sub_content">
         <i class="icon-back-in-time"></i>
-        <h3>JUST 90 SECONDS TO ORDER A CAKE</h3>
+        <h3>JUST 90 SECONDS<br>TO ORDER A CAKE</h3>
 
     </div><!-- End sub_content -->
 </div><!-- End subheader -->
