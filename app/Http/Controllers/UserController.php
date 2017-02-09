@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
-  public function test() {
-    echo $this->createTempUser("Hasssgasr", "hasshashshs@sdsd.cc");
-  }
     public function createTempUser($name, $email) {
 
       if (User::where('email',$email)->count() > 0) {
@@ -47,10 +44,7 @@ class UserController extends Controller
           'message' => 'required',
         ]);
 
-  Mail::send('email.contact', ['message' => $request["message"], 'email' => $request["email"], 'name' => $request["name"]], function($message)
-     {
-     $message->from('orders@caketreeonline.com')->to(['contacts@caketreeonline.com'],'Contact form message')->subject('Contact form message');
-   });
+  
 
 }
 

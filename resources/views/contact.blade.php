@@ -41,7 +41,6 @@ class="nav-top-bg"
     	<div class="col-md-6 col-sm-6">
         	<div class="box_style_2">
             	<h2 class="inner">Customer support</h2>
-                <p class="add_bottom_30">Adipisci conclusionemque ea duo, quo id fuisset prodesset, vis ea agam quas. <strong>Lorem iisque periculis</strong> id vis, no eum utinam interesset. Quis voluptaria id per, an nibh atqui vix. Mei falli simul nusquam te.</p>
                 <p><a href="tel://00971543354175" class="phone"><i class="icon-phone-circled"></i>  +971543354175</a></p>
                 <p class="nopadding"><a href="mailto:contact@caketreeonline.com"><i class="icon-mail-3"></i> contact@caketreeonline.com</a></p>
             </div>
@@ -59,7 +58,7 @@ class="nav-top-bg"
 
                         <div class="form-group">
                           <label>Email</label>
-						<input type="text" class="form-control" id="email" name="email" placeholder="Your email" required="">
+						<input type="text" class="form-control" id="email" name="email" placeholder="Your email" >
 					</div>
 
 
