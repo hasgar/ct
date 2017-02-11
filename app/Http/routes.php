@@ -18,11 +18,13 @@ Route::get('/contact-us', function () {
 Route::get('/about-us', function () {
     return view('about');
 });
+
 Route::get('/messageSent', function () {
     return view('messageSent');
 });
 
 Route::auth();
+
 Route::get('/', 'HomeController@index');
 Route::get('/cakes', 'CakeController@index');
 Route::get('/changeStatus/{id}/{t}/{status}', 'OrderController@changeStatus')->where('id', '[0-9]+')->where('status', '[0-9]+');

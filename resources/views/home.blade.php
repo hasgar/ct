@@ -87,7 +87,7 @@
 </div>
 
 <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
-    <img src="img/slides/slider_6-min.jpg" class="ls-bg" alt="Slide background">
+    <img src="img/slides/slider_4-min.jpg" class="ls-bg" alt="Slide background">
   <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >SURPRISE YOUR SPECIAL PERSON</h3>
     <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
 
