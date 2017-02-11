@@ -63,7 +63,7 @@ class="nav-top-bg"
     <div class="box_style_2">
       <h2 class="inner cake-details">{{$cake["name"]}} <span class="cake-price-top">- <?php if($cake["is_shaped"] == true) echo "Regular +"; ?> {{round($cake["amount"])}} AED</span> <i class="icon_info_alt pull-right"></i></h2>
 
-                <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_large_1.jpg" class="img-responsive" />
+                <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_large_1.jpg" height="1024" width="1024" class="img-responsive" />
                 @if ($cake["description"])
                 <h3>Description</h3>
                 <div class="cake-description">
