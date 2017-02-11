@@ -48,7 +48,7 @@ if ($request["email"] == "") {
 }
 Mail::send('email.contact', ['request' => $request], function($message)  use ($request)
    {
-   $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'Message from contact form')->subject('Message from contact form');
+   $message->from('orders@caketreeonline.com')->to(['contact@caketreeonline.com'],'Message from contact form')->subject('Message from contact form');
  });
 
  return redirect('/messageSent');
