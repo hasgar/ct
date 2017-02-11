@@ -46,10 +46,11 @@ class UserController extends Controller
 if (!$request->has("email")) {
   $request["email"] = "-";
 }
-  Mail::send('email.contact', ['message' => $request["message"], 'email' => $request["email"], 'name' => $request["name"]], function($message)
-     {
-     $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'Contact form message')->subject('Contact form message');
-   });
+Mail::send('email.contact', ['request' => $request], function($message)  use ($request)
+   {
+   $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'Contact form message')->subject('Contact form message');
+ });
+
 
 }
 
