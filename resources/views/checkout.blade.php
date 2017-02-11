@@ -122,11 +122,12 @@ class="nav-top-bg"
 
 
 					<hr>
+          <input type="hidden" value="{{$dt}}" id="date-today"/>
           <div class="row">
               <div class="col-md-6 col-sm-6">
                   <div class="form-group">
                       <label><i class="icon-calendar-7"></i> Select a date</label>
-                      <input name="order_date" class="date-pick form-control" data-date-format="yyyy-mm-dd" type="text" required>
+                      <input name="order_date" id="order_date" class="date-pick form-control" data-date-format="yyyy-mm-dd" type="text" required>
                   </div>
               </div>
               <div class="col-md-6 col-sm-6">
@@ -146,7 +147,8 @@ class="nav-top-bg"
           <div class="form-group">
 								<label><i class="icon-th-thumb-empty"></i> Shipping Type</label>
                 <select class="form-control" required name="shipping" id="shipping">
-                            <option value="" disabled selected>Select Shipping Type</option>
+                  <option value="" disabled selected>Select Shipping type</option>
+
                             @foreach ($shipping as $ship)
                               <option value="{{$ship['id']}}" data-price="{{$ship['extra_amount']}}">{{$ship['name']}}</option>
                             @endforeach
@@ -158,18 +160,31 @@ class="nav-top-bg"
 								<label><i class="icon-clock"></i>  Timeslot</label>
                 <select class="form-control" required name="timeslot" id="timeslot">
                             <option value="" disabled selected>Select Time slot</option>
-                            <option value="" disabled id="select-shipping-type-first">Select Shipping type first</option>
-                            @foreach ($timeslots as $timeslot)
-                              <option class="hide-this timeslots" <?php if($timeslot["hide"]) echo "disabled"; ?> value="{{$timeslot['id']}}" data-price="{{$timeslot['extra_amount']}}" data-from="{{$timeslot['extra_amount']}}" data-to="{{$timeslot['extra_amount']}}" data-type="{{$timeslot['shipping_type_id']}}">{{$timeslot['timeslot']}} - <?php if ($timeslot['extra_amount'] == 0) echo "FREE"; else echo $timeslot['extra_amount']." AED"; ?></option>
-                            @endforeach
                         </select>
-                <select class="form-control" required name="timeslot_data" id="timeslot_data">
-                                    <option value="" disabled selected>Select Time slot</option>
-                                    <option value="" disabled id="select-shipping-type-first">Select Shipping type first</option>
-                                    @foreach ($timeslots as $timeslot)
-                                      <option class="hide-this timeslots_data" <?php if($timeslot["hide"]) echo "disabled"; ?> value="{{$timeslot['id']}}" data-price="{{$timeslot['extra_amount']}}" data-from="{{$timeslot['extra_amount']}}" data-to="{{$timeslot['extra_amount']}}" data-type="{{$timeslot['shipping_type_id']}}">{{$timeslot['timeslot']}} - <?php if ($timeslot['extra_amount'] == 0) echo "FREE"; else echo $timeslot['extra_amount']." AED"; ?></option>
-                                    @endforeach
-                                </select>
+
+<div class="hide-this" id="today">
+  @foreach ($shipping as $ship)
+  <div class="hide-this" id="shipping-{{$ship['id']}}">
+  @foreach ($timeslots as $timeslot)
+  @if ($timeslot["shipping_type_id"] == $ship["id"])
+    <option class="timeslots" <?php if($timeslot["hide"]) echo "disabled"; ?> value="{{$timeslot['id']}}" data-price="{{$timeslot['extra_amount']}}" data-from="{{$timeslot['extra_amount']}}" data-to="{{$timeslot['extra_amount']}}" data-type="{{$timeslot['shipping_type_id']}}">{{$timeslot['timeslot']}} - <?php if ($timeslot['extra_amount'] == 0) echo "FREE"; else echo $timeslot['extra_amount']." AED"; ?></option>
+  @endif
+  @endforeach
+</div>
+  @endforeach
+</div>
+<div class="hide-this" id="other-days">
+  @foreach ($shipping as $ship)
+  <div class="hide-this" id="shipping-{{$ship['id']}}">
+  @foreach ($timeslots as $timeslot)
+  @if ($timeslot["shipping_type_id"] == $ship["id"])
+    <option class="timeslots" value="{{$timeslot['id']}}" data-price="{{$timeslot['extra_amount']}}" data-from="{{$timeslot['extra_amount']}}" data-to="{{$timeslot['extra_amount']}}" data-type="{{$timeslot['shipping_type_id']}}">{{$timeslot['timeslot']}} - <?php if ($timeslot['extra_amount'] == 0) echo "FREE"; else echo $timeslot['extra_amount']." AED"; ?></option>
+  @endif
+  @endforeach
+</div>
+  @endforeach
+
+</div>
 					</div>
 </div>
           </div>

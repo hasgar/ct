@@ -54,13 +54,14 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
     }
     public function checkout()
     {
+      $dt = Carbon::now();
         $items = Session::get('cart');
         if (count($items) < 1) {
           return redirect('/');
         }
         $emirates = Emirates::where('status', 1)->get();
         $shipping = ShippingType::get();
-        return view('checkout')->with('items',$items)->with('emirates',$emirates)->with('shipping',$shipping)->with('timeslots',$this->getTimeslots());
+        return view('checkout')->with('items',$items)->with('emirates',$emirates)->with('shipping',$shipping)->with('timeslots',$this->getTimeslots())->with('dt',$dt->toDateString());
     }
 
     public function changeStatus(Request $request)
