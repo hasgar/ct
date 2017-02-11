@@ -37,7 +37,7 @@ class="nav-top-bg"
 				<div id="confirm">
 					<i class="icon_check_alt2"></i>
 					<h3>Thank you!</h3>
-	<h4>Your Order ID: {{ Session::get('orderId') }} {{ Session::forget('orderId') }}</h4>
+	<h4>Your Order ID: {{$orderId}}</h4>
   <p>Please note it for future reference</p>
 				</div>
 			<a href="/cakes" class="btn_full">Buy another cake</a>
