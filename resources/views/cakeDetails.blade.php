@@ -66,7 +66,7 @@ class="nav-top-bg"
                 <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_large_1.jpg" class="img-responsive" />
                 @if ($cake["description"])
                 <h3>Description</h3>
-                <div class=""cake-description"">
+                <div class="cake-description">
     <p><?php echo $cake["description"]; ?></p>
   </div>
       @endif
