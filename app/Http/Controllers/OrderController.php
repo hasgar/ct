@@ -35,9 +35,9 @@ class OrderController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function confirmed() {
+    public function confirmed(Request $request) {
 
-      if (Session::get('orderId')) {
+      if ($request->session()->has('orderId')) {
       return view('confirmed');
     }
     else {
@@ -234,7 +234,7 @@ class OrderController extends Controller
           ->subject('CakeTree Order Invoice');
         });
          Session::forget('cart');
-         $request->session()->push('orderId',$order["id"]);
+         $request->session()->put('orderId',$order["id"]);
         return redirect('/confirmed');
 
  }
