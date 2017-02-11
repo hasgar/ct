@@ -38,7 +38,9 @@ class OrderController extends Controller
     public function confirmed(Request $request) {
 
       if ($request->session()->has('orderId')) {
-      return view('confirmed');
+        $orderId = $request->session()->get('orderId');
+        $request->session()->forget('orderId');
+      return view('confirmed')->with('orderId',$orderId);
     }
     else {
       return redirect('/');
