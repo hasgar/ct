@@ -43,13 +43,15 @@ class UserController extends Controller
           'email' => 'email',
           'message' => 'required',
         ]);
-if (!$request->has("email")) {
+if ($request["email"] == "") {
   $request["email"] = "-";
 }
 Mail::send('email.contact', ['request' => $request], function($message)  use ($request)
    {
-   $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'Contact form message')->subject('Contact form message');
+   $message->from('orders@caketreeonline.com')->to(['hasgardee@gmail.com'],'Message from contact form')->subject('Message from contact form');
  });
+
+ return redirect('/messageSent');
 
 
 }
