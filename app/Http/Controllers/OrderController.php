@@ -34,27 +34,16 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-public function test() {
-$id = 2;
-$order = Orders::where('id',$id)->first();
-$cakes = OrderCakes::where('order_id',$id)->get();
-$user = User::where('id',$order["user_id"])->first();
-$emirate = Emirates::where('id',$order["emirate_id"])->first();
-$timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
-Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)
-  {
-  $message->from('admin@caketreeonline.com')->to('hasgardee@gmail.com','Learning Laravel Support')
-  ->subject('Contact using Our Contact Form');
-  });
 
-}
     public function confirmed() {
+
       if (Session::get('orderId')) {
       return view('confirmed');
     }
     else {
       return redirect('/');
     }
+
     }
     public function checkout()
     {
@@ -147,7 +136,6 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
     $cart = Session::get('cart');
     if (count($cart) < 1)
       return Redirect::back()->withErrors(['Your cart is empty, add cakes and try again']);
-
 
     if($this->isTimeslotNotAvail($request["timeslot"]))
       return Redirect::back()->withErrors(['Timeslot not availabe. Please select next timeslot available.']);
