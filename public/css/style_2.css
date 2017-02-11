@@ -28,7 +28,7 @@
   }
  #position { margin-top:65px !important; }
 }
-.cake-description {
+.cake-description > p {
 
 font-size: 20px;
 
