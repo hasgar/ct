@@ -1,3 +1,3 @@
-Name: <?php echo $request['name']; ?> <br>
-Email: <?php echo $request['email']; ?>  <br>
-Message: <?php echo $request['message']; ?>  <br>
+<b>Name:</b> <?php echo $request['name']; ?> <br>
+<b>Email:</b> <?php echo $request['email']; ?>  <br>
+<b>Message:</b> <?php echo $request['message']; ?>  <br>
