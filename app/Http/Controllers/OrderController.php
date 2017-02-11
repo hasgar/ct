@@ -49,8 +49,12 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
 
 }
     public function confirmed() {
-
+      if (Session::get('orderId')) {
       return view('confirmed');
+    }
+    else {
+      return redirect('/');
+    }
     }
     public function checkout()
     {
@@ -242,7 +246,8 @@ Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $u
           ->subject('CakeTree Order Invoice');
         });
          Session::forget('cart');
-        return redirect('/confirmed')->with('orderId',$order["id"]);
+         $request->session()->push('orderId',$order["id"]);
+        return redirect('/confirmed');
 
  }
 
