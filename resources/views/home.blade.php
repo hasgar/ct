@@ -88,7 +88,7 @@
 
 <div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
     <img src="img/slides/slider_4-min.jpg" class="ls-bg" alt="Slide background">
-  <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >SURPRISE YOUR SPECIAL PERSON</h3>
+  <h3 class="ls-l slide_typo" style="top: 44%; left: 50%;" data-ls="offsetxin:0;durationin:2000;delayin:1000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% bottom 0;offsetxout:0;rotatexout:90;transformoriginout:50% bottom 0;" >Surprise Your Special Person</h3>
     <p class="ls-l slide_typo_2" style="top:52%; left:50%;" data-ls="durationin:2000;delayin:1000;easingin:easeOutElastic;" >Order Now</p>
 
 </div>
@@ -188,7 +188,7 @@
 <div class="parallax-content">
     <div class="sub_content">
         <i class="icon-back-in-time"></i>
-        <h3>JUST 90 SECONDS<br>TO ORDER A CAKE</h3>
+        <h3>Just 90 Seconds<br>To Order A Cake</h3>
 
     </div><!-- End sub_content -->
 </div><!-- End subheader -->

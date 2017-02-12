@@ -46,7 +46,9 @@ $("#order_date").change(function() {
 			 $(".total-amount").html(subTotal + delivery_charge + " AED")
 
 	})
-
+	$('#flavour').on('change', function() {
+		$("#photo-cake-flavour").val($(this).val());
+	})
 $('.strip_list').on("click",function(){
 	$("#cake_kg").attr("min",$(this).data('min'));
 	if ($(this).data('type') == "theme") {

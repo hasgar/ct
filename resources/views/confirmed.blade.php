@@ -38,7 +38,7 @@ class="nav-top-bg"
 					<i class="icon_check_alt2"></i>
 					<h3>Thank you!</h3>
 	<h4>Your Order ID: {{$orderId}}</h4>
-  <p>Please note it for future reference</p>
+  <p>We have sent the invoice to your email</p>
 				</div>
 			<a href="/cakes" class="btn_full">Buy another cake</a>
       <a class="btn_full_outline" href="/"><i class="icon-right"></i> Back to home</a>

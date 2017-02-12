@@ -140,7 +140,7 @@ class OrderController extends Controller
       return Redirect::back()->withErrors(['Your cart is empty, add cakes and try again']);
 
     if($this->isTimeslotNotAvail($request["timeslot"]))
-      return Redirect::back()->withErrors(['Timeslot not availabe. Please select next timeslot available.']);
+      return Redirect::back()->withErrors(['Timeslot not availabe. Please select next available timeslot.']);
 
     $net_total =  (new CartController)->getTotalAmount();
 
@@ -191,7 +191,7 @@ class OrderController extends Controller
         }
         $falvour_id = 0;
         if ($item["type"] == "theme") {
-          $falvour_id = $item["flavour"];
+          $falvour_id = $item["flavour_id"];
           $cake_total = (new CartController)->getItemAmount($item["id"],$item["quantity"],$item["kg"],$item["type"],$item["flavour_id"]);
         }
 
@@ -227,7 +227,7 @@ class OrderController extends Controller
         $timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
        Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message) use ($request)
           {
-          $message->from('orders@caketreeonline.com')->to(['orders@caketreeonline.com'],'New Order')
+          $message->from('orders@caketreeonline.com')->to(['orders@caketreeonline.com','shehin@caketreeonline.com','kitchen@caketreeonline.com','jamshi@caketreeonline.com'],'New Order')
           ->subject('New Order');
           });
        Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)  use ($request)
