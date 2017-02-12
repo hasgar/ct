@@ -37,3 +37,4 @@ Route::post('/SendMessage', 'UserController@sendMessage');
 Route::get('/removeFromCart/{id}', 'CartController@removeFromCart');
 Route::post('/placeOrder', 'OrderController@placeOrder');
 Route::get('/confirmed', 'OrderController@confirmed');
+Route::get('/tes', 'OrderController@tes');

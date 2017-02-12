@@ -128,7 +128,7 @@
     background-color: #dd292a;
     border-bottom: 2px solid #BB0A0A;
 ">
-																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;">CakeTree</h1>
+																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;"><img src="http://www.caketreeonline.com/img/logo.png" height="150" width="150" /></h1>
 																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:0px;color: #F7D7D7;line-height:135%;">New Order: CT{{ $order["id"] }}</h2>
 
 
@@ -480,7 +480,7 @@ echo $s_msg;
 																					<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?PHP if($cake['is_cheeseless'] == '1') echo '<span style="color:red;">YES</span>'; else echo "No"; ?></div>
 																				</td>																			<td valign="top" class="textContent">
 																					<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;padding-left:2px">Cake Photo:</h3>
-																					<div style="text-align:left;border-left:3px solid #fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><a href="http://www.caketreeonline.com/<?php if($cake['is_photo'] == '1') echo "uploads/".$cake['photo_url']; else echo "img/cakes/".str_replace(" ","_",strtolower($cake['name']))."_".$cake['id']."_large_1.jpg"; ?>">Click Here</a></div>
+																					<div style="text-align:left;border-left:3px solid #fff;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><a href="http://www.caketreeonline.com/<?php if($cake['is_photo'] == '1') echo "uploads/".$cake['photo_url']; else if($cake['flavour_id'] != '0') echo "img/cakes/".str_replace(" ","_",strtolower($cake['name']))."_".$cake["flavour_id"]."_small_1.jpg"; else echo "img/cakes/".str_replace(' ','_',strtolower($cake['name']))."_".$cake["id"]."_small_1.jpg"; ?>">Click Here</a></div>
 																				</td>
 																			</tr>
 																		</tbody></table>
@@ -708,7 +708,7 @@ echo $s_msg;
 																	<td valign="top" bgcolor="#E1E1E1">
 
 																		<div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;color:#828282;text-align:center;line-height:120%;">
-																			<div>Copyright © 2017 <a href="http://www.caketreeonline.com" target="_blank" style="text-decoration:none;color:#828282;"><img src="http://www.caketreeonline.com/img/logo.png" height="150" width="150" /></a>. All&nbsp;rights&nbsp;reserved.</div>
+																			<div>Copyright © 2017 <a href="http://www.caketreeonline.com" target="_blank" style="text-decoration:none;color:#828282;"><span style="color:#828282;">CakeTree</span></a>. All&nbsp;rights&nbsp;reserved.</div>
 
 																		</div>
 

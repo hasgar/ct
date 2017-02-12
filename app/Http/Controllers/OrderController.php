@@ -115,6 +115,7 @@ class OrderController extends Controller
   }
 
   public function placeOrder(Request $request) {
+
   $this->validate($request, [
       'your_name' => 'required',
       'flat_no_builder' => 'required',
@@ -227,7 +228,7 @@ class OrderController extends Controller
         $timeslot = Timeslots::where('id',$order["timeslot_id"])->first();
        Mail::send('email.newOrder', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message) use ($request)
           {
-          $message->from('orders@caketreeonline.com')->to(['orders@caketreeonline.com','shehin@caketreeonline.com','kitchen@caketreeonline.com','jamshi@caketreeonline.com'],'New Order')
+          $message->from('orders@caketreeonline.com')->to(['orders@caketreeonline.com','shehin@caketreeonline.com','kitchen@caketreeonline.com','jemshi@caketreeonline.com','adil@caketreeonline.com'],'New Order')
           ->subject('New Order');
           });
        Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)  use ($request)
@@ -240,13 +241,35 @@ class OrderController extends Controller
         return redirect('/confirmed');
 
  }
+public function tes() {
+  return Carbon::now();
+  $timeslots = Timeslots::get();
+  $current = Carbon::now();
+  for($i = 0;$i < count($timeslots);$i++) {
+    $str = $timeslots[$i]["time_from"];
+    $from = explode(":",$str);
+    if ($timeslots[$i]["shipping_type_id"] == 2)
+    $from_time = Carbon::today()->addHours($from[0] - 4)->addMinutes($from[1])->addSeconds($from[2]);
+    else
+    $from_time = Carbon::today()->addHours($from[0])->addMinutes($from[1])->addSeconds($from[2]);
 
+    if ($current > $from_time) {
+      $timeslots[$i]["hide"] = true;
+    } else {
+      $timeslots[$i]["hide"] = false;
+    }
+  }
+  return $timeslots;
+}
  public function getTimeslots() {
    $timeslots = Timeslots::get();
    $current = Carbon::now();
    for($i = 0;$i < count($timeslots);$i++) {
      $str = $timeslots[$i]["time_from"];
      $from = explode(":",$str);
+     if ($timeslots[$i]["shipping_type_id"] == 2)
+     $from_time = Carbon::today()->addHours($from[0] - 4)->addMinutes($from[1])->addSeconds($from[2]);
+     else
      $from_time = Carbon::today()->addHours($from[0])->addMinutes($from[1])->addSeconds($from[2]);
      if ($current > $from_time) {
        $timeslots[$i]["hide"] = true;
