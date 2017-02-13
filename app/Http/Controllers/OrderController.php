@@ -132,8 +132,10 @@ class OrderController extends Controller
     if (Auth::check())
     {
       $userId = Auth::user()->id;
+      $email_order = Auth::user()->email;
     } else {
       $userId = (new UserController)->createTempUser($request["your_name"],$request["email_order"])["id"];
+      $email_order = $request["email_order"];
     }
 
     $cart = Session::get('cart');
@@ -233,7 +235,7 @@ class OrderController extends Controller
           });
        Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)  use ($request)
           {
-          $message->from('orders@caketreeonline.com')->to([$request["email_order"]],'CakeTree Order')
+          $message->from('orders@caketreeonline.com')->to([$email_order],'CakeTree Order')
           ->subject('CakeTree Order Invoice');
         });
          Session::forget('cart');
