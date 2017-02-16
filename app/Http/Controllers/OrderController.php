@@ -141,8 +141,8 @@ class OrderController extends Controller
     $cart = Session::get('cart');
     if (count($cart) < 1)
       return Redirect::back()->withErrors(['Your cart is empty, add cakes and try again']);
-
-    if($this->isTimeslotNotAvail($request["timeslot"]))
+      $dt = Carbon::now();
+    if($this->isTimeslotNotAvail($request["timeslot"]) && $request["order_date"] == $dt->toDateString())
       return Redirect::back()->withErrors(['Timeslot not availabe. Please select next available timeslot.']);
 
     $net_total =  (new CartController)->getTotalAmount();
@@ -233,7 +233,7 @@ class OrderController extends Controller
           $message->from('orders@caketreeonline.com')->to(['orders@caketreeonline.com','shehin@caketreeonline.com','kitchen@caketreeonline.com','jemshi@caketreeonline.com','adil@caketreeonline.com'],'New Order')
           ->subject('New Order');
           });
-       Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)  use ($request)
+       Mail::send('email.invoice', ['order' => $order, 'cakes' => $cakes, 'user' => $user, 'emirate' => $emirate, 'timeslot' => $timeslot], function($message)  use ($email_order)
           {
           $message->from('orders@caketreeonline.com')->to([$email_order],'CakeTree Order')
           ->subject('CakeTree Order Invoice');

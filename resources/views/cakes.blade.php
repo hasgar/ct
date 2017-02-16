@@ -76,7 +76,7 @@ class="nav-top-bg"
                             ?>
                             <div class="col-md-3 col-sm-3">
                               <a class="hide-this" href="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}-cake-{{$cake["id"]}}">{{$cake["name"]}}</a>
-                                <a class="strip_list grid" href="#0" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{round($cake["amount"])}}" data-min="{{$cake["minimum_kg"]}}" data-id="{{$cake["id"]}}" data-type="normal">
+                                <a class="strip_list grid" href="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}-cake-{{$cake["id"]}}">
 
                                   <div class="desc">
                                       <div class="col-md-12 cake-block">
@@ -215,7 +215,8 @@ foreach( $theme_cakes as $cake )
   }
 ?>
 <div class="col-md-3 col-sm-3">
-    <a class="strip_list grid" href="#0" data-min="{{$cake["minimum_kg"]}}" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{round($cake["amount"])}}" data-id="{{$cake["id"]}}" data-type="theme">
+  <a class="strip_list grid" href="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}-cake-{{$cake["id"]}}">
+    <!-- <a class="strip_list grid" href="#0" data-min="{{$cake["minimum_kg"]}}" data-toggle="modal" data-target="#cake_popup" data-name="{{strtolower(str_replace("-","+",str_replace(" ","+",$cake["name"])))}}" data-price="{{round($cake["amount"])}}" data-id="{{$cake["id"]}}" data-type="theme"> -->
         <div class="desc">
           <div class="col-md-12 cake-block">
               <img src="img/cakes/{{str_replace(" ","_",strtolower($cake["name"]))}}_{{$cake["id"]}}_small_1.jpg" class="img-responsive">
