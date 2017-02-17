@@ -601,7 +601,7 @@ echo $s_msg;
 																						<table border="0" cellpadding="0" cellspacing="0" width="100%">
 																							<tbody><tr>
 																								<td valign="top" class="textContent">
-																									<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Notes</h3>
+																									<h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size: 16px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;">Notes:</h3>
 																									<div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;margin-top:3px;color: #3C3A3A;line-height:135%;background-color: #B7E8C9;padding: 3px;padding-left: 8px;"><?PHP
 echo $order['notes'];
 				?></div>
