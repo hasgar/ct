@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes%7CBuda:300%7CCinzel" media="all">
     <!-- BASE CSS -->
-    <link href="css/base_2.css" rel="stylesheet">
+    <link href="css/base_3.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
