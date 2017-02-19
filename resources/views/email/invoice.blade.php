@@ -128,8 +128,8 @@
     background-color: #dd292a;
     border-bottom: 2px solid #BB0A0A;
 ">
-																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;"><img src="http://www.caketreeonline.com/img/cake_tree_email_logo.png" /></h1>
-																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:0px;color: #F7D7D7;line-height:135%;">New Order: CT{{ $order["id"] }}</h2>
+																		<h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;" align="center"><img src="http://www.caketreeonline.com/img/cake_tree_email_logo.png" /></h1>
+																		<h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:0px;color: #F7D7D7;line-height:135%;">Order ID: CT{{ $order["id"] }}</h2>
 
 
 																	</td>
