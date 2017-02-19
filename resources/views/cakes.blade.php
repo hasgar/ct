@@ -204,7 +204,7 @@ class="nav-top-bg"
                         <div class="row">
 
                           <div class="col-md-12">
-
+                            <h4 class="theme-note">Important Note: Please order our theme cakes 24 hour prior to your preffered delivery time.</h4>
 
                             <?php $count = 1;
 foreach( $theme_cakes as $cake )

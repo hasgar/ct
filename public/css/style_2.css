@@ -28,6 +28,12 @@
   }
  #position { margin-top:65px !important; }
 }
+.theme-note {
+  color: white;
+background-color: #a90d0d;
+padding: 10px;
+font-weight: bold;
+}
 .cake-description > p {
 
 font-size: 20px;
