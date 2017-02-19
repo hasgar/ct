@@ -29,10 +29,10 @@
  #position { margin-top:65px !important; }
 }
 .theme-note {
-  color: white;
-background-color: #a90d0d;
-padding: 10px;
-font-weight: bold;
+  color: white !important;
+background-color: #a90d0d !important;
+padding: 10px !important;
+font-weight: bold !important;
 }
 .cake-description > p {
 
