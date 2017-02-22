@@ -3,7 +3,7 @@
 
 
 @section('meta')
-  <title>Home - Buy Cake Online UAE | Free Delivery</title>
+  <title>CakeTree - Buy Cake Online UAE | Free Delivery</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
