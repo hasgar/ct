@@ -34,6 +34,20 @@ class CartController extends Controller
       return redirect(url()->previous());
 
   }
+
+  public static function isContainThemeCake() {
+    if ($cart = Session::get('cart')) {
+      foreach ($cart as $c) {
+        if ($c['type'] == "theme")
+          return "1";
+      }
+      return "0";
+
+    }
+    else {
+      return "0";
+    }
+  }
   public static function getTotalAmount()
   {
       if ($cart = Session::get('cart')) {
@@ -41,8 +55,7 @@ class CartController extends Controller
       $total = 0;
       foreach ($cart as $c) {
         $cake = Cakes::where('id',$c['id'])->first();
-        if ($cake["minimum_kg"] < $c["kg"])
-          $c["kg"] = $cake["minimum_kg"];
+
           $cake_price = $cake["amount"];
           if ($cake["discount"] > 0) {
             if ($cake["discount_type"] == "-") {

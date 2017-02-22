@@ -289,11 +289,28 @@ class="nav-top-bg"
 
 
 <script>
-  $('input.date-pick').datepicker('setDate', 'today');
+var date = new Date();
+<?php if (CartController::isContainThemeCake() == "1") { ?>
+date.setDate(date.getDate()+1);
+
+<?php } else { ?>
+date.setDate(date.getDate());
+<?php } ?>
+  var curr_date = date.getDate();
+    var curr_month = date.getMonth() + 1; //Months are zero based
+    var curr_year = date.getFullYear();
+if (curr_month < 10) {
+  curr_month = "0"+curr_month;
+}
+if (curr_date < 10) {
+  curr_date = "0"+curr_date;
+}
+      $('input.date-pick').val(curr_year+"-"+curr_month+"-"+curr_date);
+  $('input.date-pick').datepicker({startDate: date});
   $('input.time-pick').timepicker({
     minuteStep: 15,
     showInpunts: false
-})
+  })
 </script>
 
 @endsection
