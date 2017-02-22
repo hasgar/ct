@@ -122,7 +122,7 @@
                 <span>2</span>
                 <h3>Choose your cake</h3>
                 <p>
-                    We have more than 100s of cakes available.
+                    We have the best cakes in UAE
                 </p>
             </div>
         </div>
