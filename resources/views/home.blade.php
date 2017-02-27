@@ -113,7 +113,8 @@
                 <span>1</span>
                 <h3>Select the city</h3>
                 <p>
-                    Choose your city where the cake to get delivered.
+                  Choose the city where you’d like your cake delivered
+
                 </p>
             </div>
         </div>
@@ -122,7 +123,7 @@
                 <span>2</span>
                 <h3>Choose your cake</h3>
                 <p>
-                    We have the best cakes in UAE
+                  We have an extensive selection of Cakes 
                 </p>
             </div>
         </div>

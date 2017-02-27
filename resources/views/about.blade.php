@@ -3,12 +3,12 @@
 
 
 @section('meta')
-  <title>About Us</title>
+  <title>CakeTreeOnline.com – About Us</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="buy cake, free delivery, buy cake online, buy cake sharjah online, buy cake dubai, buy cake sharjah">
-  <meta name="description" content="Buy Cakes in Dubai, Sharjah, Ajman online with free delivery">
+  <meta name="keywords" content="bakery in UAE, themed cakes in the UAE, cake online, caramel cake, chocolate cake, christening cakes, birthday cakes for boys and order cake online">
+  <meta name="description" content="Meet Cake Tree! The Smarter Way to buy a Cake? We offer a rather extensive selection of seductive and silky recipes, and a large showcase of some of the best themed cakes in the UAE so whatever the occasion is, we guarantee to make it special.">
   <meta name="author" content="CakeTree">
 @endsection
 
@@ -41,15 +41,18 @@ class="nav-top-bg"
     	<div class="col-md-6 col-sm-6">
         	<div class="box_style_2 about-us">
             	<h2 class="inner">About Us</h2>
-              <p>Someone once said, a party without a cake is just a meeting. And how we agree to it.</p>
-              <p>Tired of going through a million places to find that one perfect cake? Looking for the perfect cake to be delivered to surprise your friend? As cliché as it sounds, your find ends here at 'Cake Tree'.</p>
-              <p>Cake Tree features carefully crafted cakes from the best in the business in and around UAE. We make sure our cakes looks great ( after all it has to be insta-worthy, right) and tastes even better. Top chefs, best ingredients, made with lots of love - our cakes are sure to be devoured by the young and old alike.</p>
-              <p>You can choose from our vast menu of the regular cakes plus a few of our super hit innovative flavours. Our website, one of the best in terms of being user friendly helps with processing your orders in the best possible manner. Quick and easy - try it to see for yourself.
+              <p>What if you could cut the trips to your local brick and mortar bakery in UAE and have a luscious cake delivered right to your doorstep? Have you been disappointed upon learning your favorite cake isn’t available at your local cake shop? Or you need a few cakes delivered fast to your next corporate function?</p>
+              <p>Meet Cake Tree! The Smarter Way to buy a Cake? We offer a rather extensive selection of seductive and silky recipes, and a large showcase of some of the best themed cakes in the UAE so whatever the occasion is, we guarantee to make it special. </p>
+              <h3>5 Reasons to Choose Cake Tree</h3>
+              <p>&#10003; <b>Hasslefree Experience</b> – what’s sets us apart from the competition is the sheer convenience of ordering cake online including a delicious caramel cake, chocolate cake and a myriad of christening cakes and birthday cakes for boys. </p>
+              <p>&#10003; <b>Extensive selection</b> – our vast portfolio will leave you spoilt for choice and includes regular cakes such as black forest cake, unique photo cakes and theme cakes for birthdays and corporate houses.</p>
+              <p>&#10003; <b>No upfront payment</b> – simply select your city and cake, fill in your details and pay for the cake when it arrives. It’s really that easy!</p>
+              <p>&#10003; <b>Fast and free delivery </b> – “You can't have your cake and eat it too”. We beg to differ! All you pay for is the price of the cake and we’ll get it to you at no extra cost.
 </p>
-<p>At Cake Tree, we promise quality and prompt customer care. Because we know how important a deliciously gorgeous cake is!</p>
-<p>Efficiently packed, free and hassle - free door to door delivery makes your last minute party plans easier and delicious.
+              <p>&#10003; <b>Guaranteed satisfaction</b> – with a wealth of experience, we know cakes and look forward to exceeding your expectations.
 </p>
-<p>Let's get the party started!</p>
+    <p>Whether you desire cake for that special someone or milestone or want to indulge in a tantalizing cake recipe yourself, order cake online Cake Tree, and we’ll guarantee to make your sweet tooth scream with joy!  </p>
+
               </div>
     	</div>
 
