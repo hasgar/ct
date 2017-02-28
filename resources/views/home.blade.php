@@ -63,11 +63,7 @@
 
 </div>
 
-    <!-- second slide -->
-<div class="ls-slide" data-ls="slidedelay: 3000; transition2d:5;">
-        <img  src="img/slides/slider_2-min.jpg" class="ls-bg" alt="Slide background">
 
-</div>
 
  <!-- third slide -->
  <div class="ls-slide" data-ls="slidedelay:3000; transition2d:5;" >
@@ -123,7 +119,7 @@
                 <span>2</span>
                 <h3>Choose your cake</h3>
                 <p>
-                  We have an extensive selection of Cakes 
+                  We have an extensive selection of Cakes
                 </p>
             </div>
         </div>
