@@ -40,7 +40,7 @@ class UserController extends Controller
     public function sendMessage(Request $request) {
       $this->validate($request, [
           'name' => 'required',
-          'email' => 'email',
+          'email' => 'email|required',
           'message' => 'required',
         ]);
 if ($request["email"] == "") {

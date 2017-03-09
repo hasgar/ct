@@ -58,7 +58,7 @@ class="nav-top-bg"
 
                         <div class="form-group">
                           <label>Email</label>
-						<input type="text" class="form-control" id="email" name="email" placeholder="Your email" >
+						<input type="text" class="form-control" id="email" name="email" placeholder="Your email" required>
 					</div>
 
 
