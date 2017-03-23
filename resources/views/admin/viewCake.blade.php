@@ -37,8 +37,8 @@ class="nav-top-bg"
 
 				<section id="section-2">
 
-<form action="editCake" method="POST" enctype='multipart/form-data'>
-               {{ csrf_field() }}
+          <form action="editCake" method="POST" enctype='multipart/form-data'>
+                         {{ csrf_field() }}
 					<div class="wrapper_indent" style="margin-top:200px">
             <div class="col-md-8" style="padding-left:0px">
 						<div class="form-group">
@@ -104,7 +104,7 @@ class="nav-top-bg"
 					<hr class="styled_2">
 
 					<div class="wrapper_indent" style="padding-left:0px">
-						<div class="add_more_cat"><a href="addCake" class="btn_1" style="float:right">Update</button> <button class="btn">Add new cake</button> </div>
+						<div class="add_more_cat"><button type="submit" class="btn_1" style="float:right">Update</button>  </div>
 					</div><!-- End wrapper_indent -->
 
 				<!-- End section 2 -->
