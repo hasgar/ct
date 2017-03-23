@@ -67,7 +67,7 @@ class="nav-top-bg"
                           <i class="icon_pencil-edit_alt"></i>
                         </td>
                         <td style="width:65%">
-                          <B>{{$user['name']}}</B> - {{$user['phone']}}
+                          <B>{{$user['name']}}</B> - {{$user['email']}}
                         </td>
                         <td style="width:35%">
                           </td>
