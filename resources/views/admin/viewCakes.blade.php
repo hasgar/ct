@@ -73,7 +73,9 @@ class="nav-top-bg"
                         <td style="width:65%">
                           <a href="cake-{{$cake['id']}}-view"><B>{{$cake['name']}}</B> - {{$cake['amount']}} AED</a>
                         </td>
-                        <td style="width:35%">
+                        <td style="width:35%" align="right">
+                          <a href="cake-{{$cake['id']}}-delete">delete</a>
+
                           </td>
                       </tr>
                       @endforeach
