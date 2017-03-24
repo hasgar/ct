@@ -205,7 +205,7 @@ return redirect('cake-'.$id.'-view/');
         $file = Input::file("photos");
             $i++;
             $extension = $file->getClientOriginalExtension();
-            $destinationPath = '/img/cakes/';
+            $destinationPath = 'img/cakes/';
             $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
 
             if($file->move($destinationPath, $fileName))
