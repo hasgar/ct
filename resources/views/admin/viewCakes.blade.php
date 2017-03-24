@@ -56,7 +56,7 @@ class="nav-top-bg"
 
           <div class="indent_title_in">
 						<i class="icon_document_alt"></i>
-						<h3>Cakes</h3>
+						<div class="col-md-3"> <h3>Cakes</h3>  </div><div class="col-md-9" align="right"> <a href="/addCake" class="btn_1">Add New Cake</a></div>
 						</div>
 
             <div class="row">

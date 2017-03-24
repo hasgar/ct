@@ -14,9 +14,8 @@ function hideLoader() {
   $('#preloader').show()
   $('.sk-spinner').show()
 }
-$(document).ready(function() {
 $('input[type=radio][name=is_shaped]').change(function() {
-  alert("sds");
+
    if($('#is_shaped').is(':checked')) {
      $('#amount').val($('#amount').data('shaped'));
      $('#amount').prop("readonly", true);
@@ -24,5 +23,4 @@ $('input[type=radio][name=is_shaped]').change(function() {
      $('#amount').val("");
      $('#amount').prop("readonly", false);
    }
-});
 });

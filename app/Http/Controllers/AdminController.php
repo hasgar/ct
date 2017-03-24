@@ -13,12 +13,14 @@ use App\OrderCakes;
     use App\User;
     use App\Emirates;
     use App\Timeslots;
+
+use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 
 class AdminController extends Controller
 {
     public function home() {
-      
+
         $orders = Orders::paginate(20);
       return view('admin.dashboard')->with('orders',$orders);
 
@@ -36,6 +38,7 @@ class AdminController extends Controller
     public function viewSettings(Request $request) {
 
         $settings = Settings::first();
+        $settings['shaped_charge'] = Cakes::where('is_shaped',1)->first()["amount"];
         return view('admin.viewSettings')->with('settings',$settings);
 
     }
@@ -61,7 +64,7 @@ class AdminController extends Controller
 
         $this->validate($request, [
                         'is_shaped' => 'required',
-                        'cake_id' => 'required',
+                        'cake_id' => 'required|exists:cakes,id',
                         'is_shaped_avail' => 'required',
                         'is_photo_avail' => 'required',
                         'name' => 'required',
@@ -72,10 +75,11 @@ class AdminController extends Controller
           $request['amount'] = 35;
         }
         $id = $request['cake_id'];
+        $oldName =  Cakes::where('id',$id)->first()["name"];
         Cakes::where('id',$id)->update([
                                        'description' => $request['description'],
                                        'is_shaped' => $request['is_shaped'],
-                                       'shaped_amount' => $request['shaped_amount'],
+                                       'shaped_amount' => $request['amount'],
                                        'is_shaped_avail' => $request['is_shaped_avail'],
                                        'is_photo_avail' => $request['is_photo_avail'],
                                        'name' => $request['name'],
@@ -83,6 +87,7 @@ class AdminController extends Controller
                                        'discount' => 0,
                                        'discount_type' => 0,
                                        'cake_type_id' => 1,
+                                       'minimum_kg' => $request['minimum_kg'],
                                        'avail_from' => '10:00:00',
                                        'avail_to' => '21:00:00',
                                        'pic_count' => 1,
@@ -90,11 +95,14 @@ class AdminController extends Controller
                                        ]);
 
         $i = 0;
-        foreach(Input::file("photos") as $file) {
+        if ($request->hasFile('photos')) {
+$file = Input::file("photos");
+      //  foreach(Input::file("photos") as $file) {
+
             $i++;
             $extension = $file->getClientOriginalExtension();
             $destinationPath = 'img/cakes/';
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.$extension;
+            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
 
             if($file->move($destinationPath, $fileName))
             {
@@ -108,7 +116,7 @@ class AdminController extends Controller
                 ];
             }
 
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.$extension;
+            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".".$extension;
 
             if($file->move($destinationPath, $fileName))
             {
@@ -121,7 +129,14 @@ class AdminController extends Controller
                 'errors' => 'photo upload failed'
                 ];
             }
+      //  }
+      }
+      else {
+        if ($oldName != $request['name']) {
+          rename("img/cakes/".str_replace(" ","_",strtolower($oldName))."_".$id."_small_1.jpg", "img/cakes/".str_replace(" ","_",strtolower($request['name']))."_".$id."_small_1.jpg");
+          rename("img/cakes/".str_replace(" ","_",strtolower($oldName))."_".$id."_large_1.jpg", "img/cakes/".str_replace(" ","_",strtolower($request['name']))."_".$id."_large_1.jpg");
         }
+      }
 return redirect('cake-'.$id.'-view/');
 
 
@@ -139,22 +154,25 @@ return redirect('cake-'.$id.'-view/');
 
         $this->validate($request, [
                         'is_shaped' => 'required',
-                        'shaped_amount' => 'required',
                         'is_shaped_avail' => 'required',
                         'is_photo_avail' => 'required',
                         'name' => 'required',
                         'amount' => 'required',
+                        'photos' => 'required',
                         'minimum_kg' => 'required'
                         ]);
-
+        if($request['is_shaped'] == "1") {
+                          $request['amount'] = 35;
+                        }
         $cake = Cakes::create([
                     'description' => $request['description'],
                     'is_shaped' => $request['is_shaped'],
-                    'shaped_amount' => $request['shaped_amount'],
+                    'shaped_amount' => $request['amount'],
                     'is_shaped_avail' => $request['is_shaped_avail'],
                     'is_photo_avail' => $request['is_photo_avail'],
                     'name' => $request['name'],
                     'amount' => $request['amount'],
+                    'minimum_kg' => $request['minimum_kg'],
                     'discount' => 0,
                     'discount_type' => 0,
                     'cake_type_id' => 1,
@@ -166,11 +184,11 @@ return redirect('cake-'.$id.'-view/');
         $id = $cake['id'];
 
         $i = 0;
-        foreach(Input::file("photos") as $file) {
+        $file = Input::file("photos");
             $i++;
             $extension = $file->getClientOriginalExtension();
             $destinationPath = 'img/cakes/';
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.$extension;
+            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
 
             if($file->move($destinationPath, $fileName))
             {
@@ -184,7 +202,7 @@ return redirect('cake-'.$id.'-view/');
                 ];
             }
 
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.$extension;
+            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".".$extension;
 
             if($file->move($destinationPath, $fileName))
             {
@@ -197,7 +215,6 @@ return redirect('cake-'.$id.'-view/');
                 'errors' => 'photo upload failed'
                 ];
             }
-        }
 
         return redirect('cake-'.$id.'-view/');
 

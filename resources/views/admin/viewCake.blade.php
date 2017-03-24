@@ -59,16 +59,16 @@ class="nav-top-bg"
 <div class="col-md-4" >
 <div class="form-group">
   <label>Amount</label>
-  <input type="text" name="amount" id="amount" data-shaped="{{$cake['shaped']}}" value="@if($cake['is_shaped'] == "1") 35 @else {{$cake['amount']}} @endif" @if($cake['is_shaped'] == "1") readonly="readonly" @endif class="form-control" placeholder="Enter cake amount">
+  <input type="text" name="amount" id="amount" data-shaped="{{$cake['shaped']}}" value="<?php if($cake['is_shaped'] == "1") echo "35"; else  echo $cake['amount'];?>" @if($cake['is_shaped'] == "1") readonly="readonly" @endif class="form-control" placeholder="Enter cake amount">
 </div>
 </div>
 <div class="col-md-4" style="padding-left:0px">
 						<div class="form-group">
               <label>Is this Theme Cake?</label> <br>
               <label>
-                <input type="radio"  id="is_shaped" value="1" name="is_shaped" @if($cake['is_shaped'] == 1) checked @endif class="icheck is_shaped"><b>Yes</b></label>
+                <input type="radio"  id="is_shaped" value="1" name="is_shaped" @if($cake['is_shaped'] == 1) checked @endif class=" is_shaped"> <b>Yes</b></label>
               <label class="margin_left">
-                <input type="radio"  id="is_shaped" value="0" name="is_shaped" @if($cake['is_shaped'] != 1) checked @endif  class="icheck is_shaped"><b>No</b></label>
+                <input type="radio"  id="is_shaped" value="0" name="is_shaped" @if($cake['is_shaped'] != 1) checked @endif  class=" is_shaped"> <b>No</b></label>
 
             </div>
 
@@ -77,9 +77,9 @@ class="nav-top-bg"
             <div class="form-group">
               <label>Is this cake available for Photo cake?</label> <br>
               <label>
-                <input type="radio" name="is_photo_avail" value="1"  @if($cake['is_photo_avail'] == 1) checked @endif class="icheck"><b>Yes</b></label>
+                <input type="radio" name="is_photo_avail" value="1"  @if($cake['is_photo_avail'] == 1) checked @endif class=""> <b>Yes</b></label>
               <label class="margin_left">
-                <input type="radio" name="is_photo_avail" value="0" @if($cake['is_photo_avail'] != 1) checked @endif  class="icheck"><b>No</b></label>
+                <input type="radio" name="is_photo_avail" value="0" @if($cake['is_photo_avail'] != 1) checked @endif  class=""> <b>No</b></label>
 
             </div>
             </div>
@@ -87,9 +87,9 @@ class="nav-top-bg"
             <div class="form-group">
               <label>Is this cake available for Theme cake?</label> <br>
               <label>
-                <input type="radio" name="is_shaped_avail" value="1" @if($cake['is_shaped_avail'] == 1) checked @endif class="icheck"><b>Yes</b></label>
+                <input type="radio" name="is_shaped_avail" value="1" @if($cake['is_shaped_avail'] == 1) checked @endif class=""> <b>Yes</b></label>
               <label class="margin_left">
-                <input type="radio" name="is_shaped_avail"  value="0" @if($cake['is_shaped_avail'] != 1) checked @endif  class="icheck"><b>No</b></label>
+                <input type="radio" name="is_shaped_avail"  value="0" @if($cake['is_shaped_avail'] != 1) checked @endif  class=""> <b>No</b></label>
 
             </div>
             </div>
