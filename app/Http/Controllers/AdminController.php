@@ -38,7 +38,7 @@ class AdminController extends Controller
     public function deleteCake(Request $request) {
 
         $cake = Cakes::where('id',$request->id)->first();
-        Cakes::where('id',$id)->update([
+        Cakes::where('id',$request->id)->update([
           'status' => 0
         ]);
 
