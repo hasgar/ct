@@ -44,6 +44,7 @@ Route::get('/cake-{id}-view', 'AdminController@viewCake')->where('id', '[0-9]+')
    Route::get('/addCake', 'AdminController@addCakeForm')->middleware('isAdmin');
    Route::post('/addCake', 'AdminController@addCake')->middleware('isAdmin');
    Route::get('/order-{id}-view', 'AdminController@viewOrder')->where('id', '[0-9]+')->middleware('isAdmin');
+   Route::get('/cake-{id}-delete', 'AdminController@deleteCake')->where('id', '[0-9]+')->middleware('isAdmin');
    Route::get('/viewUsers', 'AdminController@viewUsers')->middleware('isAdmin');
    Route::get('/viewCakes', 'AdminController@viewCakes')->middleware('isAdmin');
    Route::get('/viewSettings', 'AdminController@viewSettings')->middleware('isAdmin');

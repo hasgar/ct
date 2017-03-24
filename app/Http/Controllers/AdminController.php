@@ -35,6 +35,17 @@ class AdminController extends Controller
 
     }
 
+    public function deleteCake(Request $request) {
+
+        $cake = Cakes::where('id',$request->id)->first();
+        Cakes::where('id',$id)->update([
+          'status' => 0
+        ]);
+
+        return redirect('/viewCakes');
+
+    }
+
     public function viewSettings(Request $request) {
 
         $settings = Settings::first();
@@ -76,6 +87,9 @@ class AdminController extends Controller
         }
         $id = $request['cake_id'];
         $oldName =  Cakes::where('id',$id)->first()["name"];
+        if (Cakes::where('name',$request['name'])->count() > 0) {
+          return Redirect::back()->withErrors(['Cake with this name already exist.']);
+        }
         Cakes::where('id',$id)->update([
                                        'description' => $request['description'],
                                        'is_shaped' => $request['is_shaped'],
@@ -161,8 +175,12 @@ return redirect('cake-'.$id.'-view/');
                         'photos' => 'required',
                         'minimum_kg' => 'required'
                         ]);
+
         if($request['is_shaped'] == "1") {
                           $request['amount'] = 35;
+                        }
+                        if (Cakes::where('name',$request['name'])->count() > 0) {
+                          return Redirect::back()->withErrors(['Cake with this name already exist.']);
                         }
         $cake = Cakes::create([
                     'description' => $request['description'],
@@ -245,7 +263,7 @@ return redirect('cake-'.$id.'-view/');
 
     public function viewCakes(Request $request) {
 
-        $cakes = Cakes::orderBy('id', 'desc')->paginate(20);
+        $cakes = Cakes::where('status',1)->orderBy('id', 'desc')->paginate(20);
 
         return view('admin.viewCakes')->with('cakes',$cakes);
 

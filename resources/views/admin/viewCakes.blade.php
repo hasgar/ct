@@ -74,7 +74,7 @@ class="nav-top-bg"
                           <a href="cake-{{$cake['id']}}-view"><B>{{$cake['name']}}</B> - {{$cake['amount']}} AED</a>
                         </td>
                         <td style="width:35%" align="right">
-                          <a href="cake-{{$cake['id']}}-delete">delete</a>
+                          <a href="cake-{{$cake['id']}}-delete" onclick="return confirm('Are you sure?')">delete</a>
 
                           </td>
                       </tr>
