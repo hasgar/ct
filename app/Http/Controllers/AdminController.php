@@ -132,7 +132,7 @@ $file = Input::file("photos");
 
             $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".".$extension;
 
-            if($file->move($destinationPath, $fileName))
+          /*  if($file->move($destinationPath, $fileName))
             {
 
             }
@@ -142,7 +142,7 @@ $file = Input::file("photos");
                 'message' => 'image_upload',
                 'errors' => 'photo upload failed'
                 ];
-            }
+            }*/
       //  }
       }
       else {
