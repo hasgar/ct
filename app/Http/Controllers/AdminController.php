@@ -209,7 +209,7 @@ return redirect('cake-'.$id.'-view/');
             $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
 
             if($file->move($destinationPath, $fileName))
-            {
+{
 
             }
             else {
