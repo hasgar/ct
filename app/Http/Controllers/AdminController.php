@@ -21,7 +21,7 @@ class AdminController extends Controller
 {
     public function home() {
 
-        $orders = Orders::paginate(20);
+        $orders = Orders::orderBy('id', 'desc')->paginate(20);
       return view('admin.dashboard')->with('orders',$orders);
 
 
