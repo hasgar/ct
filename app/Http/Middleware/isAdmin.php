@@ -8,12 +8,13 @@
 
         public function handle($request, Closure $next)
         {
-          if (Auth::check()) {
 
-            if (Auth::user()->id == '96'){
+            if (Auth::check()) {
+
+            if (Auth::user()->id == '86'){
                 return $next($request);
             }
-            
+
         }
             return redirect('/');
         }

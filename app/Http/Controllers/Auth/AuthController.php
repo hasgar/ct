@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -28,7 +29,11 @@ class AuthController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+
+
+
+
+
 
     /**
      * Create a new authentication controller instance.
@@ -69,4 +74,16 @@ class AuthController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
+
+    public function redirectPath()
+     {
+       if (Auth::check()) {
+       if (Auth::user()->id == '86'){
+          return '/adminHome';
+       }
+        return '/';
+      }
+      return '/';
+     }
+
 }
