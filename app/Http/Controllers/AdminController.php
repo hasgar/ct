@@ -236,7 +236,7 @@ return redirect('cake-'.$id.'-view/');
 
     public function viewUsers(Request $request) {
 
-        $users = User::paginate(20);
+        $users = User::orderBy('id', 'desc')->paginate(20);
 
         return view('admin.viewUsers')->with('users',$users);
 
@@ -245,7 +245,7 @@ return redirect('cake-'.$id.'-view/');
 
     public function viewCakes(Request $request) {
 
-        $cakes = Cakes::paginate(20);
+        $cakes = Cakes::orderBy('id', 'desc')->paginate(20);
 
         return view('admin.viewCakes')->with('cakes',$cakes);
 
