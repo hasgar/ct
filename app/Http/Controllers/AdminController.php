@@ -207,7 +207,7 @@ return redirect('cake-'.$id.'-view/');
             $extension = $file->getClientOriginalExtension();
             $destinationPath = 'img/cakes/';
             $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
-
+return $destinationPath.$fileName;
             if($file->move($destinationPath, $fileName))
             {
 
@@ -222,7 +222,7 @@ return redirect('cake-'.$id.'-view/');
 
             $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".".$extension;
 
-            if(Input::file('photos')->move(public_path().$destinationPath, $fileName))
+            if($file->move($destinationPath, $fileName))
             {
 
             }
