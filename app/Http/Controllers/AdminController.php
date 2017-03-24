@@ -208,7 +208,7 @@ return redirect('cake-'.$id.'-view/');
             $destinationPath = 'img/cakes/';
             $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
 
-            if($file->copy(public_path().$destinationPath, $fileName))
+            if($file->copy(public_path().$destinationPath, $fileName))  //
             {
 
             }
