@@ -110,13 +110,13 @@ class AdminController extends Controller
 
         $i = 0;
         if ($request->hasFile('photos')) {
-$file = Input::file("photos");
-      //  foreach(Input::file("photos") as $file) {
+$file = $request->file('photos');
+   
 
             $i++;
             $extension = $file->getClientOriginalExtension();
             $destinationPath = 'img/cakes/';
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
+            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".jpg";
 
             if($file->move($destinationPath, $fileName))
             {
@@ -130,20 +130,9 @@ $file = Input::file("photos");
                 ];
             }
 
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".".$extension;
-
-          /*  if($file->move($destinationPath, $fileName))
-            {
-
-            }
-            else {
-                return [
-                'status' => 'error',
-                'message' => 'image_upload',
-                'errors' => 'photo upload failed'
-                ];
-            }*/
-      //  }
+            
+copy($destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".jpg", $destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".jpg");
+           
       }
       else {
         if ($oldName != $request['name']) {
@@ -202,11 +191,11 @@ return redirect('cake-'.$id.'-view/');
         $id = $cake['id'];
 
         $i = 0;
-        $file = Input::file("photos");
+        $file = $request->file('photos');
             $i++;
             $extension = $file->getClientOriginalExtension();
             $destinationPath = 'img/cakes/';
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".".$extension;
+            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".jpg";
 
             if($file->move($destinationPath, $fileName))
 {
@@ -220,19 +209,7 @@ return redirect('cake-'.$id.'-view/');
                 ];
             }
 
-            $fileName = str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".".$extension;
-
-            if($file->move($destinationPath, $fileName))
-            {
-
-            }
-            else {
-                return [
-                'status' => 'error',
-                'message' => 'image_upload',
-                'errors' => 'photo upload failed'
-                ];
-            }
+copy($destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".jpg", $destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".jpg");
 
         return redirect('cake-'.$id.'-view/');
 

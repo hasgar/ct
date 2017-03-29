@@ -65,9 +65,9 @@ class="nav-top-bg"
 						<div class="form-group">
               <label>Is this Theme Cake?</label> <br>
               <label>
-                <input type="radio" name="is_shaped" value="1"  class="icheck"><b>Yes</b></label>
+                <input type="radio" name="is_shaped" value="1"  class=""><b>Yes</b></label>
               <label class="margin_left">
-                <input type="radio" name="is_shaped" value="0" checked class="icheck"><b>No</b></label>
+                <input type="radio" name="is_shaped" value="0" checked class=""><b>No</b></label>
 
             </div>
 </div>
@@ -75,9 +75,9 @@ class="nav-top-bg"
             <div class="form-group">
               <label>Is this cake available for Photo cake?</label> <br>
               <label>
-                <input type="radio" name="is_photo_avail" value="1" checked class="icheck"><b>Yes</b></label>
+                <input type="radio" name="is_photo_avail" value="1" checked class=""><b>Yes</b></label>
               <label class="margin_left">
-                <input type="radio" name="is_photo_avail"  value="0" class="icheck"><b>No</b></label>
+                <input type="radio" name="is_photo_avail"  value="0" class=""><b>No</b></label>
 
             </div>
             </div>
@@ -85,9 +85,9 @@ class="nav-top-bg"
             <div class="form-group">
               <label>Is this cake available for Theme cake?</label> <br>
               <label>
-                <input type="radio" name="is_shaped_avail" value="1" checked  class="icheck"><b>Yes</b></label>
+                <input type="radio" name="is_shaped_avail" value="1" checked  class=""><b>Yes</b></label>
               <label class="margin_left">
-                <input type="radio" name="is_shaped_avail" value="0" class="icheck"><b>No</b></label>
+                <input type="radio" name="is_shaped_avail" value="0" class=""><b>No</b></label>
 
             </div>
             </div>
