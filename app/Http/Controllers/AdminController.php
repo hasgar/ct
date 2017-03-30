@@ -111,7 +111,7 @@ class AdminController extends Controller
         $i = 0;
         if ($request->hasFile('photos')) {
 $file = $request->file('photos');
-   
+
 
             $i++;
             $extension = $file->getClientOriginalExtension();
@@ -130,9 +130,9 @@ $file = $request->file('photos');
                 ];
             }
 
-            
+
 copy($destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id."_small_".$i.".jpg", $destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id."_large_".$i.".jpg");
-           
+
       }
       else {
         if ($oldName != $request['name']) {
@@ -236,6 +236,110 @@ copy($destinationPath.str_replace(" ","_",strtolower($request['name']))."_".$id.
         return view('admin.viewUsers')->with('users',$users);
 
     }
+
+    public function viewSliders(Request $request) {
+
+        $sliders = Slider::orderBy('id', 'desc')->get();
+
+        return view('admin.viewSliders')->with('sliders',$sliders);
+
+    }
+
+    public function viewSlider(Request $request) {
+
+        $slider = Slider::where('id', $request->id)->first();
+
+        return view('admin.viewSlider')->with('slider',$slider);
+
+    }
+
+    public function addSliderForm(Request $request) {
+
+
+
+        return view('admin.addSlider');
+
+    }
+
+    public function addSlider(Request $request) {
+
+      $this->validate($request, [
+                      'image' => 'required',
+                  ]);
+
+
+        $image = "";
+        if ($request->hasFile('image')) {
+          $extension = $request->file('photo')->getClientOriginalExtension();
+          $destinationPath = 'img/slider/';
+          $fileName = str_replace(" ","",uniqid('img_', true).microtime()).'.'.$extension;
+
+          if($request->file('photo')->move($destinationPath, $fileName))
+          {
+          $image = $destinationPath.$fileName;
+         }
+           else {
+             return Redirect::back()->withErrors(['Image upload problem. please try again']);
+           }
+        } else {
+          return Redirect::back()->withErrors(['Select slider image']);
+        }
+
+          $slider = Slider::create([
+            'image' => $image,
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'order_id' => 1
+          ]);
+
+          return redirect('slider-'.$slider['id'].'-view/');
+
+
+
+    }
+
+
+    public function editSlider(Request $request) {
+
+      $this->validate($request, [
+                      'slider_id' => 'required|exists:slider,id',
+                  ]);
+
+        $slider = Slider::where('id', $request['slider_id'])->first();
+        $image = "";
+        if ($request->hasFile('image')) {
+          $extension = $request->file('photo')->getClientOriginalExtension();
+          $destinationPath = 'img/slider/';
+          $fileName = str_replace(" ","",uniqid('img_', true).microtime()).'.'.$extension;
+
+          if($request->file('photo')->move($destinationPath, $fileName))
+          {
+          $image = $destinationPath.$fileName;
+         }
+           else {
+             return Redirect::back()->withErrors(['Image upload problem. please try again']);
+           }
+        } else {
+          return Redirect::back()->withErrors(['Select slider image']);
+        }
+        if ($request->hasFile('image')) {
+         Slider::::where('id', $request['slider_id']])->update([
+           'image' => $image,
+            'title' => $request['title'],
+            'description' => $request['description']
+          ]);
+        } else {
+          Slider::::where('id', $request['slider_id']])->update([
+             'title' => $request['title'],
+             'description' => $request['description']
+           ]);
+        }
+
+          return redirect('slider-'.$request['slider_id'].'-view/');
+
+
+    }
+
 
 
     public function viewCakes(Request $request) {

@@ -39,8 +39,7 @@ Route::post('/placeOrder', 'OrderController@placeOrder');
 Route::get('/confirmed', 'OrderController@confirmed');
 Route::get('/adminHome', 'AdminController@home')->middleware('isAdmin');
 Route::get('/cake-{id}-view', 'AdminController@viewCake')->where('id', '[0-9]+')->middleware('isAdmin');
-
-   Route::post('/editCake', 'AdminController@editCake')->middleware('isAdmin');
+Route::post('/editCake', 'AdminController@editCake')->middleware('isAdmin');
    Route::get('/addCake', 'AdminController@addCakeForm')->middleware('isAdmin');
    Route::post('/addCake', 'AdminController@addCake')->middleware('isAdmin');
    Route::get('/order-{id}-view', 'AdminController@viewOrder')->where('id', '[0-9]+')->middleware('isAdmin');
@@ -49,3 +48,8 @@ Route::get('/cake-{id}-view', 'AdminController@viewCake')->where('id', '[0-9]+')
    Route::get('/viewCakes', 'AdminController@viewCakes')->middleware('isAdmin');
    Route::get('/viewSettings', 'AdminController@viewSettings')->middleware('isAdmin');
    Route::post('/changeSettings', 'AdminController@changeSettings')->middleware('isAdmin');
+   Route::get('/slider-{id}-view', 'AdminController@viewSlider')->where('id', '[0-9]+')->middleware('isAdmin');
+   Route::get('/viewSliders', 'AdminController@viewSliders')->middleware('isAdmin');
+   Route::get('/addSlider', 'AdminController@addSliderForm')->middleware('isAdmin');
+   Route::post('/editSlider', 'AdminController@editSlider')->middleware('isAdmin');
+   Route::post('/addSlider', 'AdminController@addSlider')->middleware('isAdmin');
