@@ -44,6 +44,7 @@ class="nav-top-bg"
 					</li>
 					<li><a href="/viewCakes" class="icon-users"><span>CAKES</span></a>
 					</li>
+          <li><a href="/viewSliders" class="icon-users"><span>Sliders</span></a></li>
 					<li><a href="/viewSettings" class="icon-users"><span>Settings</span></a>
 					</li>
 				</ul>

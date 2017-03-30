@@ -41,13 +41,13 @@ class="nav-top-bg"
 ">
 			<nav>
 				<ul>
-					<li><a href="#section-1" class="icon-profile"><span>CAKES</span></a>
+        <li><a href="#" class="icon-users"><span>Sliders</span></a></li>
+					<li><a href="/viewCakes" class="icon-profile"><span>CAKES</span></a>
 					</li>
 					<li><a href="/adminHome" class="icon-menut-items"><span>ORDERS</span></a>
 					</li>
 					<li><a href="/viewUsers" class="icon-users"><span>USERS</span></a>
 					</li>
-          <li><a href="/viewSliders" class="icon-users"><span>Sliders</span></a></li>
           <li><a href="/viewSettings" class="icon-users"><span>Settings</span></a></li>
 				</ul>
 			</nav>
@@ -57,7 +57,7 @@ class="nav-top-bg"
 
           <div class="indent_title_in">
 						<i class="icon_document_alt"></i>
-						<div class="col-md-3"> <h3>Cakes</h3>  </div><div class="col-md-9" align="right"> <a href="/addCake" class="btn_1">Add New Cake</a></div>
+						<div class="col-md-3"> <h3>Sliders</h3>  </div><div class="col-md-9" align="right"> <a href="/addSlider" class="btn_1">Add New Slider</a></div>
 						</div>
 
             <div class="row">
@@ -66,16 +66,16 @@ class="nav-top-bg"
                 <div class="wrapper_indent">
                   <table class="table table-striped notifications">
                     <tbody>
-                      @foreach ($cakes as $cake)
+                      @foreach ($sliders as $slider)
                       <tr>
                         <td style="width:5%">
                           <i class="icon_pencil-edit_alt"></i>
                         </td>
                         <td style="width:65%">
-                          <a href="cake-{{$cake['id']}}-view"><B>{{$cake['name']}}</B> - {{$cake['amount']}} AED</a>
+                          <a href="slider-{{$slider['id']}}-view"><B>{{$slider['title']}}</B></a>
                         </td>
                         <td style="width:35%" align="right">
-                          <a href="cake-{{$cake['id']}}-delete" onclick="return confirm('Are you sure?')">delete</a>
+                          <a href="slider-{{$slider['id']}}-delete" onclick="return confirm('Are you sure?')">delete</a>
 
                           </td>
                       </tr>
@@ -89,7 +89,7 @@ class="nav-top-bg"
 
               </div><!-- End row -->
             </div><!-- End wrapper_indent -->
-            {{ $cakes->links() }}
+
 				</section><!-- End section 1 -->
 
 				<section id="section-2">
